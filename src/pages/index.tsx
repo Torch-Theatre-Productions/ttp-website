@@ -144,7 +144,6 @@ const links = [
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
-      
       <h1 style={headingStyles}>
         Under Construction
         <br />
