@@ -1,7 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import styled from "styled-components";
 import { Header } from "./header";
 import "./layout.css";
+
+const StyledMain = styled.main`
+  > * {
+    padding: 1.45rem 1.0875rem 1.45rem;
+  }
+`;
 
 export const Layout: React.FCwC = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -16,15 +23,14 @@ export const Layout: React.FCwC = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <StyledMain>{children}</StyledMain>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

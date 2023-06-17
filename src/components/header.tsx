@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
+import TorchLogo from "../images/torch.png";
 
-export const Header = ({ siteTitle }) => (
+export const Header = ({}) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: "#fae2cb",
     }}
   >
     <div
@@ -15,17 +15,15 @@ export const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        <img src={TorchLogo} style={{ height: "3rem", margin: 0 }} />
+      </Link>
     </div>
   </header>
 );
