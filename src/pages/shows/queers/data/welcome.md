@@ -14,6 +14,6 @@ Secondly, to **our cast and directors** (not you, Glen), who have been so enthus
 
 Thirdly, to our amazing production duo of **Gavin and Will**, who between them have a wealth of experience in their respective areas. Since this is Torch's first full-budget production, it can be difficult to know whether you're doing the right things or on track to succeed, but knowing these two have your back helps a lot.
 
-And finally, to **you!** Thank you so much for grabbing a ticket and coming to support us. This project means a lot to us all, and I hope that some parts of the pieces you're about to see move you in the ways they've moved us.
+And finally, to **you!** Thank you so much for grabbing a ticket and coming to support us. This project means a lot to us all, and I hope that some of the pieces you're about to see move you in the ways they've moved us.
 
 **Chris Johnstone**

@@ -10,11 +10,11 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build && gh-pages -d public"
+    "deploy": "yarn build && gh-pages -d public"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
