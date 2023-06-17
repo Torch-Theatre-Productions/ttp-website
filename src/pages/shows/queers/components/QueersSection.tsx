@@ -11,7 +11,7 @@ export const QueersSection = styled.div`
     padding-right: ${theme.padding.left * 2}rem;
     padding-top: ${theme.padding.top * 2}rem;
     padding-bottom: ${theme.padding.top * 2}rem;
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 2rem, 100% calc(100% - 2rem), 0% 100%);
   }
   & + *:not(&) {
     &,
@@ -20,3 +20,5 @@ export const QueersSection = styled.div`
     }
   }
 `;
+
+export default QueersSection;

@@ -6,9 +6,6 @@ Offences Act. They celebrate a century of evolving social attitudes and
 political milestones in British gay history as seen through the eyes of
 different individuals.
 
-[‘Let’s not forget how far we have come’: Mark Gatiss on remembering gay history
-in Queers](https://nickhernbooksblog.com/2017/07/27/lets-not-forget-how-far-we-have-come-mark-gatiss-on-remembering-gay-history-in-queers/)
-
 In 2018 the Oxford Theatre Guild performed three of the monologues at local
 drama festivals. Directed by Simon Tavener, the cast included Victoria. We are
 excited to be restaging Missing Alice along with five of the other monologues to

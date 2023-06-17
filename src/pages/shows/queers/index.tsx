@@ -10,7 +10,7 @@ import QueersLogo from "./data/images/queerslogo.png";
 import Welcome from "./data/welcome.md";
 import AboutTorch from "./data/aboutTorch.md";
 import AboutQueers from "./data/aboutQueers.md";
-import PerformanceInfo from "./data/performance.md";
+import PerformanceInfo from "./data/performance.mdx";
 import Acknowledgements from "./data/acknowlegements.md";
 import Biographies from "./data/biographies.mdx";
 import OxfordPride from "./data/oxfordPride.md";
@@ -19,7 +19,7 @@ import { QueersSection } from "./components/QueersSection";
 
 interface IQueersProgrammeProps {}
 
-const QueersMain = styled.main`
+const QueersMain = styled.div`
   padding: ${theme.doublePadding};
   background: url(${Brick}) bottom center;
   * {
