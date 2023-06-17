@@ -1,0 +1,75 @@
+[
+  {
+    "name": "David Guthrie",
+    "image": "biodata/david.jpg",
+    "role": "Steve",
+    "in": "Something Borrowed",
+    "bio": "biodata/david.md"
+  },
+  {
+    "name": "Nathan Peter Grassi",
+    "image": "biodata/nathan.jpg",
+    "role": "Perce",
+    "in": "The Man on the Platform",
+    "bio": ""
+  },
+  {
+    "name": "Niamh Simpson",
+    "image": "biodata/niamh.jpg",
+    "role": "Bobby",
+    "in": "The Perfect Gentleman",
+    "bio": ""
+  },
+  {
+    "name": "Wayne T Brown",
+    "image": "biodata/wayne.jpg",
+    "role": "Director",
+    "in": ["I Miss the War", "The Perfect Gentleman"],
+    "bio": ""
+  },
+  {
+    "name": "Simon Tavener",
+    "image": "biodata/simon.jpg",
+    "role": "Director",
+    "in": ["Missing Alice", "Something Borrowed"],
+    "bio": ""
+  },
+  {
+    "name": "Glen Young",
+    "image": "biodata/glen.jpg",
+    "role": "Director",
+    "in": ["The Man on the Platform", "More Anger"],
+    "bio": ""
+  },
+  {
+    "name": "Chris Johnstone",
+    "image": "biodata/chris.jpg",
+    "role": ["Producer", "Phil"],
+    "in": "More Anger",
+    "bio": ""
+  },
+  {
+    "name": "Victoria Wilson",
+    "image": "biodata/.jpg",
+    "role": ["Producer", "Alice"],
+    "in": "Missing Alice",
+    "bio": ""
+  },
+  {
+    "name": "Robert Bristow",
+    "image": "biodata/robert.jpg",
+    "role": "Jack",
+    "in": "I Miss the War",
+    "bio": ""
+  },
+  {
+    "name": "Will Penington",
+    "role": "Lighting and Sound Designer",
+    "bio": ""
+  },
+  {
+    "name": "Gavin Wilson",
+    "role": "Stage Manager",
+    "bio": ""
+  }
+]

@@ -1,9 +1,9 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Header } from "./header"
-import "./layout.css"
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import { Header } from "./header";
+import "./layout.css";
 
-export const Layout = ({ children }) => {
+export const Layout: React.FCwC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -12,7 +12,7 @@ export const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -32,5 +32,5 @@ export const Layout = ({ children }) => {
         </footer>
       </div>
     </>
-  )
-}
+  );
+};
