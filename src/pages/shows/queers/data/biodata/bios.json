@@ -1,65 +1,65 @@
 [
   {
     "name": "David Guthrie",
-    "image": "biodata/david.jpg",
+    "image": "david",
     "role": "Steve",
-    "in": "Something Borrowed",
-    "bio": "biodata/david.md"
+    "roleIn": "Something Borrowed",
+    "bio": "david.mdx"
   },
   {
     "name": "Nathan Peter Grassi",
-    "image": "biodata/nathan.jpg",
+    "image": "nathan",
     "role": "Perce",
-    "in": "The Man on the Platform",
+    "roleIn": "The Man on the Platform",
     "bio": ""
   },
   {
     "name": "Niamh Simpson",
-    "image": "biodata/niamh.jpg",
+    "image": "niamh",
     "role": "Bobby",
-    "in": "The Perfect Gentleman",
+    "roleIn": "The Perfect Gentleman",
     "bio": ""
   },
   {
     "name": "Wayne T Brown",
-    "image": "biodata/wayne.jpg",
+    "image": "wayne",
     "role": "Director",
-    "in": ["I Miss the War", "The Perfect Gentleman"],
+    "roleIn": ["I Miss the War", "The Perfect Gentleman"],
     "bio": ""
   },
   {
     "name": "Simon Tavener",
-    "image": "biodata/simon.jpg",
+    "image": "simon",
     "role": "Director",
-    "in": ["Missing Alice", "Something Borrowed"],
+    "roleIn": ["Missing Alice", "Something Borrowed"],
     "bio": ""
   },
   {
     "name": "Glen Young",
-    "image": "biodata/glen.jpg",
+    "image": "glen",
     "role": "Director",
-    "in": ["The Man on the Platform", "More Anger"],
+    "roleIn": ["The Man on the Platform", "More Anger"],
     "bio": ""
   },
   {
     "name": "Chris Johnstone",
-    "image": "biodata/chris.jpg",
+    "image": "chris",
     "role": ["Producer", "Phil"],
-    "in": "More Anger",
+    "roleIn": "More Anger",
     "bio": ""
   },
   {
     "name": "Victoria Wilson",
-    "image": "biodata/.jpg",
+    "image": "victoria",
     "role": ["Producer", "Alice"],
-    "in": "Missing Alice",
+    "roleIn": "Missing Alice",
     "bio": ""
   },
   {
     "name": "Robert Bristow",
-    "image": "biodata/robert.jpg",
+    "image": "robert",
     "role": "Jack",
-    "in": "I Miss the War",
+    "roleIn": "I Miss the War",
     "bio": ""
   },
   {
