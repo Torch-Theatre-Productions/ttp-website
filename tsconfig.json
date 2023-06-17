@@ -106,6 +106,7 @@
     "./src/**/*",
     "gatsby-node.js",
     "./gatsby-config.ts",
-    "./plugins/**/*"
+    "./plugins/**/*",
+    "src/pages/shows/queers/components/.theme.ts"
   ]
 }

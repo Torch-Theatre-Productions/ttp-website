@@ -1,4 +1,5 @@
 import * as React from "react";
+import { theme } from "./components/.theme";
 
 import Welcome from "./data/welcome.md";
 import AboutTorch from "./data/aboutTorch.md";
@@ -8,8 +9,13 @@ import Acknowledgements from "./data/acknowlegements.md";
 import Biographies from "./data/biographies.mdx";
 import OxfordPride from "./data/oxfordPride.md";
 import More from "./data/furtherReading.md";
+import { styled } from "styled-components";
 
 interface IQueersProgrammeProps {}
+
+const QueersSection = styled.section`
+  background: ${theme.background};
+`;
 
 const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
   props
@@ -17,7 +23,9 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
   return (
     <>
       {/* Welcome notes */}
-      <Welcome />
+      <QueersSection>
+        <Welcome />
+      </QueersSection>
       {/* About Queers */}
       <AboutQueers />
       {/* Cast List/Performance Info */}

@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
       options: {
         name: "pages",
         path: "./src/pages/",
+        ignore: [`**/\.*`],
       },
       __key: "pages",
     },
