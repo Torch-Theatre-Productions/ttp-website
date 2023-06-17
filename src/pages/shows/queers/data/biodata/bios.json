@@ -4,72 +4,72 @@
     "image": "david",
     "role": "Steve",
     "roleIn": "Something Borrowed",
-    "bio": "david.mdx"
+    "bio": "david.md"
   },
   {
     "name": "Nathan Peter Grassi",
     "image": "nathan",
     "role": "Perce",
     "roleIn": "The Man on the Platform",
-    "bio": ""
+    "bio": "nathan.md"
   },
   {
     "name": "Niamh Simpson",
     "image": "niamh",
     "role": "Bobby",
     "roleIn": "The Perfect Gentleman",
-    "bio": ""
+    "bio": "niamh.md"
   },
   {
     "name": "Wayne T Brown",
     "image": "wayne",
     "role": "Director",
     "roleIn": ["I Miss the War", "The Perfect Gentleman"],
-    "bio": ""
+    "bio": "wayne.md"
   },
   {
     "name": "Simon Tavener",
     "image": "simon",
     "role": "Director",
     "roleIn": ["Missing Alice", "Something Borrowed"],
-    "bio": ""
+    "bio": "simon.md"
   },
   {
     "name": "Glen Young",
     "image": "glen",
     "role": "Director",
     "roleIn": ["The Man on the Platform", "More Anger"],
-    "bio": ""
+    "bio": "glen.md"
   },
   {
     "name": "Chris Johnstone",
     "image": "chris",
     "role": ["Producer", "Phil"],
     "roleIn": "More Anger",
-    "bio": ""
+    "bio": "chris.md"
   },
   {
     "name": "Victoria Wilson",
     "image": "victoria",
     "role": ["Producer", "Alice"],
     "roleIn": "Missing Alice",
-    "bio": ""
+    "bio": "victoria.md"
   },
   {
     "name": "Robert Bristow",
     "image": "robert",
     "role": "Jack",
     "roleIn": "I Miss the War",
-    "bio": ""
+    "bio": "robert.md"
   },
   {
     "name": "Will Penington",
     "role": "Lighting and Sound Designer",
-    "bio": ""
+    "bio": "will.md"
   },
   {
     "name": "Gavin Wilson",
     "role": "Stage Manager",
-    "bio": ""
+    "bio": "gavin.md"
   }
 ]

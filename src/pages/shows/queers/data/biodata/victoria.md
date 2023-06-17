@@ -1,0 +1,3 @@
+Victoria has been performing for over 35 years in Devon and Oxfordshire. Other roles include Lady Windermere in _Lady Windermere's Fan_ (Sidmouth Amateur Dramatic Society), Clare in _Sweet Panic_ (Studio Theatre Club) and Maid Marion in _Robin Hood_ (Oxford People's Theatre). She has also performed with the Oxford Theatre Guild as Sister Anderson in _Whose Life is it Anyway,_ Julie/Nora in _The Ragged Trousered Philanthropists_ and the Blue Fairy in _Pinocchio_.
+
+Victoria also enjoys musical theatre and has performed many times with OXOPS at the Playhouse and New Theatre. She has also appeared in _Made in Dagenham_ and _Company_ with MAC Productions and is currently rehearsing for their production of _Dirty Rotten Scoundrels_ at Arts at the Old Fire Station in October.

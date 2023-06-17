@@ -1,7 +1,3 @@
----
-title: David's Bio
----
-
 David has been acting with various Oxford-based theatre groups since his student
 days. Favourite roles have included the Shamrayev (_The Seagull_), Duke
 Frederick (_As You Like It_), Revd Parris (_The Crucible_), Mr Alfieri (_A View

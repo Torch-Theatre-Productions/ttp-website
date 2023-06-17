@@ -26,7 +26,13 @@ const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
       <h2>{name}</h2>
       {image && <BioImage src={image} />}
       <p>
-        {roleString} - {inString}
+        <b>{roleString}</b>
+        {inString ? (
+          <span>
+            {` - `}
+            <i>{inString}</i>
+          </span>
+        ) : undefined}
       </p>
       {bio || undefined}
     </div>
