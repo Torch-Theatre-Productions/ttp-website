@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktorch_theatre_productions_website=self.webpackChunktorch_theatre_productions_website||[]).push([[374],{2879:function(e,t,n){n.r(t),n.d(t,{Head:function(){return r}});var o=n(9953);t.default=e=>o.createElement("div",null,o.createElement("p",null,"Shows - Coming soon"));const r=()=>o.createElement("title",null,"Shows - Torch Theatre Productions")}}]);
-//# sourceMappingURL=component---src-pages-shows-index-tsx-4f6e5ccbe70b6526a706.js.map
