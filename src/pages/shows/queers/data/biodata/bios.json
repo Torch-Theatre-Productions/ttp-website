@@ -1,75 +1,86 @@
 [
   {
-    "name": "David Guthrie",
-    "image": "david",
-    "role": "Steve",
-    "roleIn": "Something Borrowed",
-    "bio": "david.md"
-  },
-  {
-    "name": "Nathan Peter Grassi",
-    "image": "nathan",
-    "role": "Perce",
-    "roleIn": "The Man on the Platform",
-    "bio": "nathan.md"
-  },
-  {
-    "name": "Niamh Simpson",
-    "image": "niamh",
-    "role": "Bobby",
-    "roleIn": "The Perfect Gentleman",
-    "bio": "niamh.md"
-  },
-  {
     "name": "Wayne T Brown",
     "image": "wayne",
     "role": "Director",
     "roleIn": ["I Miss the War", "The Perfect Gentleman"],
-    "bio": "wayne.md"
+    "bio": "wayne.md",
+    "category": "Directors"
   },
   {
     "name": "Simon Tavener",
     "image": "simon",
     "role": "Director",
     "roleIn": ["Missing Alice", "Something Borrowed"],
-    "bio": "simon.md"
+    "bio": "simon.md",
+    "category": "Directors"
   },
   {
     "name": "Glen Young",
     "image": "glen",
     "role": "Director",
     "roleIn": ["The Man on the Platform", "More Anger"],
-    "bio": "glen.md"
+    "bio": "glen.md",
+    "category": "Directors"
   },
   {
-    "name": "Chris Johnstone",
-    "image": "chris",
-    "role": ["Producer", "Phil"],
-    "roleIn": "More Anger",
-    "bio": "chris.md"
+    "name": "Nathan Peter Grassi",
+    "image": "nathan",
+    "role": "Perce",
+    "roleIn": "The Man on the Platform",
+    "bio": "nathan.md",
+    "category": "Set A"
   },
   {
     "name": "Victoria Wilson",
     "image": "victoria",
     "role": ["Producer", "Alice"],
     "roleIn": "Missing Alice",
-    "bio": "victoria.md"
+    "bio": "victoria.md",
+    "category": "Set A"
   },
   {
     "name": "Robert Bristow",
     "image": "robert",
     "role": "Jack",
     "roleIn": "I Miss the War",
-    "bio": "robert.md"
+    "bio": "robert.md",
+    "category": "Set A"
+  },
+  {
+    "name": "Niamh Simpson",
+    "image": "niamh",
+    "role": "Bobby",
+    "roleIn": "The Perfect Gentleman",
+    "bio": "niamh.md",
+    "category": "Set B"
+  },
+  {
+    "name": "Chris Johnstone",
+    "image": "chris",
+    "role": ["Producer", "Phil"],
+    "roleIn": "More Anger",
+    "bio": "chris.md",
+    "category": "Set B"
+  },
+  {
+    "name": "David Guthrie",
+    "image": "david",
+    "role": "Steve",
+    "roleIn": "Something Borrowed",
+    "bio": "david.md",
+    "category": "Set B"
   },
   {
     "name": "Will Penington",
     "role": "Lighting and Sound Designer",
-    "bio": "will.md"
+    "bio": "will.md",
+    "category": "Production"
   },
   {
     "name": "Gavin Wilson",
     "role": "Stage Manager",
-    "bio": "gavin.md"
+    "bio": "gavin.md",
+    "category": "Production"
   }
 ]

@@ -2,6 +2,7 @@ import * as React from "react";
 import * as path from "path";
 import { IBioProps, default as Bio } from "../../components/Bio";
 import { graphql, useStaticQuery } from "gatsby";
+import { QueersSection } from "./QueersSection";
 
 interface HeadshotsQuery {
   node: {
@@ -50,20 +51,28 @@ const LazyBiosByName = queersBiosJSON.reduce<{
   return acc;
 }, {});
 
-const QueersBios = () => {
+interface QueersBiosProps {
+  category: string;
+}
+
+const QueersBios = ({ category }: QueersBiosProps) => {
   // First query for the headshot image URLs
   const headshotsByName = useQueersHeadshotsByName();
 
   // Attach the URLs to the JSON
-  const biosWithImages: IBioProps[] = queersBiosJSON.map((bio) => ({
-    ...bio,
-    image: bio.image ? headshotsByName[bio.image] : undefined,
-  }));
+  const biosWithImages: IBioProps[] = queersBiosJSON
+    .filter((bio) => bio.category == category)
+    .map((bio) => ({
+      ...bio,
+      image: bio.image ? headshotsByName[bio.image] : undefined,
+    }));
 
   return biosWithImages.map((bio) => {
     const BioMdx = LazyBiosByName[bio.name];
     return (
-      <Bio {...bio} bio={BioMdx ? <BioMdx /> : undefined} key={bio.name} />
+      <QueersSection key={bio.name}>
+        <Bio {...bio} bio={BioMdx ? <BioMdx /> : undefined} />
+      </QueersSection>
     );
   });
 };

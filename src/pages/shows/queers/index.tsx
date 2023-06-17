@@ -15,6 +15,7 @@ import Acknowledgements from "./data/acknowlegements.md";
 import Biographies from "./data/biographies.mdx";
 import OxfordPride from "./data/oxfordPride.md";
 import More from "./data/furtherReading.md";
+import { QueersSection } from "./components/QueersSection";
 
 interface IQueersProgrammeProps {}
 
@@ -41,21 +42,38 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
     <QueersMain>
       <img src={QueersLogo} />
       {/* Welcome notes */}
-      <Welcome />
+      <QueersSection>
+        <Welcome />
+      </QueersSection>
+
       {/* About Queers */}
-      <AboutQueers />
+      <QueersSection>
+        <AboutQueers />
+      </QueersSection>
+
       {/* Cast List/Performance Info */}
-      <QueersSectionWithBackground>
+      <QueersSection>
         <PerformanceInfo />
-      </QueersSectionWithBackground>
+      </QueersSection>
+
       {/* Bios */}
       <Biographies />
+
       {/* About Torch */}
-      <AboutTorch />
+      <QueersSection>
+        <AboutTorch />
+      </QueersSection>
+
       {/* Acknowledgements */}
-      <Acknowledgements />
+      <QueersSection>
+        <Acknowledgements />
+      </QueersSection>
+
       {/* Pride */}
-      <OxfordPride />
+      <QueersSection>
+        <OxfordPride />
+      </QueersSection>
+
       {/* Further reading and Promo */}
       <More />
     </QueersMain>

@@ -15,15 +15,15 @@ export const Header = ({}) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <Link
+      <img src={TorchLogo} style={{ height: "3rem", margin: 0 }} />
+      {/* <Link
         to="/"
         style={{
           color: `white`,
           textDecoration: `none`,
         }}
       >
-        <img src={TorchLogo} style={{ height: "3rem", margin: 0 }} />
-      </Link>
+      </Link> */}
     </div>
   </header>
 );

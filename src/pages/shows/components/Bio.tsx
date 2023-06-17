@@ -1,6 +1,5 @@
 import * as React from "react";
 import { styled } from "styled-components";
-import { theme } from "../queers/components/.theme";
 
 export interface IBioProps {
   name: string;
@@ -8,6 +7,7 @@ export interface IBioProps {
   image?: string;
   roleIn?: string | string[];
   bio?: React.ReactNode;
+  category?: string;
 }
 
 const BioImage = styled.img`
@@ -16,22 +16,8 @@ const BioImage = styled.img`
   object-fit: cover;
 
   border-radius: 50%;
-  image-rendering: pixelated;
+  image-rendering: crisp-edges;
   filter: grayscale(1);
-`;
-
-const BioWrapper = styled.div`
-  padding-top: ${theme.padding.top}rem;
-  &:nth-of-type(2n) {
-    background: ${theme.background};
-    margin-left: ${theme.padding.left * -2}rem;
-    padding-left: ${theme.padding.left * 2}rem;
-    margin-right: ${theme.padding.left * -2}rem;
-    padding-right: ${theme.padding.left * 2}rem;
-    padding-top: ${theme.padding.top * 2}rem;
-    padding-bottom: ${theme.padding.top * 2}rem;
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  }
 `;
 
 const NameAndImageHeader = styled.div`
@@ -49,7 +35,7 @@ const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
   const inString = Array.isArray(roleIn) ? roleIn.join(", ") : roleIn;
 
   return (
-    <BioWrapper>
+    <>
       <NameAndImageHeader>
         {image && <BioImage src={image} />}
         <div>
@@ -68,7 +54,7 @@ const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
         </div>
       </NameAndImageHeader>
       {bio || undefined}
-    </BioWrapper>
+    </>
   );
 };
 

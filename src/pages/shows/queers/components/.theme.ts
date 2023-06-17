@@ -1,6 +1,6 @@
 export const theme = {
   background: "#000",
-  foreground: "#fff",
+  foreground: "hsl(29, 72%, 95%)",
   padding: {
     top: 1.45,
     left: 1.0875,
