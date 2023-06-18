@@ -2,6 +2,7 @@ import { InstagramEmbed } from "react-social-media-embed";
 import RomeoAndJuliet from "./images/randjposter.jpg";
 import styled from "styled-components";
 import { theme } from "../components/.theme";
+import Helmet from "react-helmet";
 
 export const InstaDiv = styled.div`
   display: flex;
@@ -13,27 +14,32 @@ export const InstaDiv = styled.div`
 ## Interviews with Cast
 
 <>
-
-{" "}
-
-<InstaDiv>
-  <InstagramEmbed url="https://www.instagram.com/p/CtOapjTo3e-/" width="100%" />
-</InstaDiv>
-
-{" "}
-
-<InstaDiv>
-  <InstagramEmbed url="https://www.instagram.com/p/CtUGlC2oFXS/" width="100%" />
-</InstaDiv>
-
-{" "}
-
-<InstaDiv>
-  <InstagramEmbed url="https://www.instagram.com/p/CtYt1nuImGj/" width="100%" />
-</InstaDiv>
-
+  <Helmet>
+    <script src="https://instagram.com/embed" />
+  </Helmet>
   <InstaDiv>
-    <InstagramEmbed url="https://www.instagram.com/p/CtkUhdoN0Xx/" width="100%" />
+    <InstagramEmbed
+      url="https://www.instagram.com/p/CtOapjTo3e-/"
+      width="100%"
+    />
+  </InstaDiv>
+  <InstaDiv>
+    <InstagramEmbed
+      url="https://www.instagram.com/p/CtUGlC2oFXS/"
+      width="100%"
+    />
+  </InstaDiv>
+  <InstaDiv>
+    <InstagramEmbed
+      url="https://www.instagram.com/p/CtYt1nuImGj/"
+      width="100%"
+    />
+  </InstaDiv>
+  <InstaDiv>
+    <InstagramEmbed
+      url="https://www.instagram.com/p/CtkUhdoN0Xx/"
+      width="100%"
+    />
   </InstaDiv>
 </>
 
