@@ -77,7 +77,7 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
       {/* Further reading and Promo */}
       <More />
       <QueersQuote num={8} />
-      <p>v1.0.4</p>
+      <p>v1.0.5</p>
     </QueersMain>
   );
 };
