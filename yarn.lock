@@ -1793,7 +1793,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.21.0":
+"@babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.21.0":
   version: 7.22.5
   resolution: "@babel/runtime@npm:7.22.5"
   dependencies:
@@ -7769,6 +7769,17 @@ __metadata:
   peerDependencies:
     "@parcel/core": ^2.0.0
   checksum: cd7f4dd8d7198d47dad74a89e0f2f51c948e930d2ec864d17672192cea3c1f6846bb37a0ed3cdf8469c7c95f2444b67448598cd732d0d18634a6fa147acfd0fd
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-instagram-embed@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "gatsby-plugin-instagram-embed@npm:4.0.0"
+  dependencies:
+    "@babel/runtime": ^7.16.3
+  peerDependencies:
+    gatsby: ^4.0.0
+  checksum: 0357514d9a0f013958db8a8ada24cb1c4f1c0f16190944c440511bc87a293a293e6eab80c716875eac79355db31b0ab42c011a1aa334d8cada9e86f700e07ade
   languageName: node
   linkType: hard
 
@@ -14543,6 +14554,7 @@ __metadata:
     "@types/react-dom": ^18.0.11
     babel-plugin-styled-components: ^2.0.7
     gatsby: ^5.11.0
+    gatsby-plugin-instagram-embed: ^4.0.0
     gatsby-plugin-mdx: ^5.11.0
     gatsby-plugin-react-helmet: ^6.11.0
     gatsby-plugin-styled-components: ^6.11.0

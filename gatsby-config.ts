@@ -12,7 +12,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-instagram-embed",
     { resolve: "gatsby-plugin-mdx", options: { extensions: [".mdx", ".md"] } },
     {
       resolve: "gatsby-source-filesystem",
