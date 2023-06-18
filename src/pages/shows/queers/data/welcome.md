@@ -4,7 +4,7 @@ Hello and welcome to the Burton Taylor Studio and this production of _Queers_,
 brought to you by **Torch Theatre Productions Oxford**!
 
 If we were to travel back in time to about a year ago, you would find Tora and
-myself in a sunny garden, each with a glass of white wine. We would casually be
+myself in a sunny garden; each with a glass of white wine. We would casually be
 talking about our Oxford theatre experiences and our mutual love for a couple of
 musicals that don't receive wider recognition. "But nobody would put these shows
 on", you would hear us say, "there's not enough demand for shows like these, and
