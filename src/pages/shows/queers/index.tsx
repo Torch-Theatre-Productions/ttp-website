@@ -16,23 +16,16 @@ import Biographies from "./data/biographies.mdx";
 import OxfordPride from "./data/oxfordPride.md";
 import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
+import QueersQuote from "./components/QueersQuote";
 
 interface IQueersProgrammeProps {}
 
 const QueersMain = styled.div`
   padding: ${theme.doublePadding};
-  background: url(${Brick}) bottom center;
+  background: url(${Brick});
   * {
     color: ${theme.foreground};
   }
-`;
-
-const QueersSectionWithBackground = styled.section`
-  background: ${theme.background};
-  margin: ${theme.reverseDoublePadding};
-  margin-top: initial;
-  margin-bottom: initial;
-  padding: ${theme.doublePadding};
 `;
 
 const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
@@ -51,31 +44,39 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
         <AboutQueers />
       </QueersSection>
 
+      <QueersQuote num={0} />
+
       {/* Cast List/Performance Info */}
       <QueersSection>
         <PerformanceInfo />
       </QueersSection>
 
+      <QueersQuote num={1} />
       {/* Bios */}
       <Biographies />
 
+      <QueersQuote num={2} />
       {/* About Torch */}
       <QueersSection>
         <AboutTorch />
       </QueersSection>
 
+      <QueersQuote num={3} />
       {/* Acknowledgements */}
       <QueersSection>
         <Acknowledgements />
       </QueersSection>
 
+      <QueersQuote num={4} />
       {/* Pride */}
       <QueersSection>
         <OxfordPride />
       </QueersSection>
 
+      <QueersQuote num={5} />
       {/* Further reading and Promo */}
       <More />
+      <QueersQuote num={6} />
     </QueersMain>
   );
 };

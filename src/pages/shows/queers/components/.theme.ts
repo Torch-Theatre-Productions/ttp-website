@@ -1,5 +1,5 @@
 export const theme = {
-  background: "#000",
+  background: "#0c0c0d",
   foreground: "hsl(29, 72%, 95%)",
   padding: {
     top: 1.45,
