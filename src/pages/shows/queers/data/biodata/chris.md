@@ -10,5 +10,5 @@ Chris would like to personally thank Glen for working with him on _More Anger_
 as well as tapping him on the shoulder for _Dexter_ over two years ago, which
 ultimately led to his involvement in _Mrs Pack_, _Dexter_ and _Verity_. Chris
 would like to dedicate this performance to his parents, who have always been a
-fountain of support, as well as all the ex-boyfriends that have given him enough
+fountain of support, as well as all the ex-boyfriends that have given him the
 angst to work with for this performance.
