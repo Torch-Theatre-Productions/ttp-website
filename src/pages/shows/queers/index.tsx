@@ -14,7 +14,7 @@ import PerformanceInfo from "./data/performance.mdx";
 import Acknowledgements from "./data/acknowlegements.md";
 import Biographies from "./data/biographies.mdx";
 import OxfordPride from "./data/oxfordPride.md";
-import More from "./data/furtherReading.md";
+import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
 
 interface IQueersProgrammeProps {}

@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:18.2.0"],\
             ["react-is", "npm:18.2.0"],\
+            ["react-social-media-embed", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:2.3.5"],\
             ["styled-components", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:6.0.0-rc.2-4007"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
@@ -8635,6 +8636,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["classnames", [\
+        ["npm:2.3.2", {\
+          "packageLocation": "./.yarn/cache/classnames-npm-2.3.2-d2fdae468d-2c62199789.zip/node_modules/classnames/",\
+          "packageDependencies": [\
+            ["classnames", "npm:2.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["clean-stack", [\
         ["npm:2.2.0", {\
           "packageLocation": "./.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip/node_modules/clean-stack/",\
@@ -14358,6 +14368,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["load-script", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/load-script-npm-1.0.0-32a3163a57-8458e3f07b.zip/node_modules/load-script/",\
+          "packageDependencies": [\
+            ["load-script", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["loader-runner", [\
         ["npm:4.3.0", {\
           "packageLocation": "./.yarn/cache/loader-runner-npm-4.3.0-9ca67df372-a90e00dee9.zip/node_modules/loader-runner/",\
@@ -18074,6 +18093,114 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-social-media-embed", [\
+        ["npm:2.3.5", {\
+          "packageLocation": "./.yarn/cache/react-social-media-embed-npm-2.3.5-3b216b7049-43ae15a427.zip/node_modules/react-social-media-embed/",\
+          "packageDependencies": [\
+            ["react-social-media-embed", "npm:2.3.5"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:2.3.5", {\
+          "packageLocation": "./.yarn/__virtual__/react-social-media-embed-virtual-58b03d83a4/0/cache/react-social-media-embed-npm-2.3.5-3b216b7049-43ae15a427.zip/node_modules/react-social-media-embed/",\
+          "packageDependencies": [\
+            ["react-social-media-embed", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:2.3.5"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["classnames", "npm:2.3.2"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:18.2.0"],\
+            ["react-sub-unsub", "virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:2.1.11"],\
+            ["react-twitter-embed", "virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:4.0.4"],\
+            ["react-youtube", "virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:10.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-sub-unsub", [\
+        ["npm:2.1.11", {\
+          "packageLocation": "./.yarn/cache/react-sub-unsub-npm-2.1.11-0edd9eb141-4f5b3943f5.zip/node_modules/react-sub-unsub/",\
+          "packageDependencies": [\
+            ["react-sub-unsub", "npm:2.1.11"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:2.1.11", {\
+          "packageLocation": "./.yarn/__virtual__/react-sub-unsub-virtual-70208a447e/0/cache/react-sub-unsub-npm-2.1.11-0edd9eb141-4f5b3943f5.zip/node_modules/react-sub-unsub/",\
+          "packageDependencies": [\
+            ["react-sub-unsub", "virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:2.1.11"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-twitter-embed", [\
+        ["npm:4.0.4", {\
+          "packageLocation": "./.yarn/cache/react-twitter-embed-npm-4.0.4-0760dd0caa-cdb3c5bd04.zip/node_modules/react-twitter-embed/",\
+          "packageDependencies": [\
+            ["react-twitter-embed", "npm:4.0.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:4.0.4", {\
+          "packageLocation": "./.yarn/__virtual__/react-twitter-embed-virtual-6672d3a057/0/cache/react-twitter-embed-npm-4.0.4-0760dd0caa-cdb3c5bd04.zip/node_modules/react-twitter-embed/",\
+          "packageDependencies": [\
+            ["react-twitter-embed", "virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:4.0.4"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:18.2.0"],\
+            ["scriptjs", "npm:2.5.9"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-youtube", [\
+        ["npm:10.1.0", {\
+          "packageLocation": "./.yarn/cache/react-youtube-npm-10.1.0-57507894ba-514678c2a2.zip/node_modules/react-youtube/",\
+          "packageDependencies": [\
+            ["react-youtube", "npm:10.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:10.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-youtube-virtual-2e50231c9f/0/cache/react-youtube-npm-10.1.0-57507894ba-514678c2a2.zip/node_modules/react-youtube/",\
+          "packageDependencies": [\
+            ["react-youtube", "virtual:58b03d83a4a49623fd1763693cf807cf9a8e2510f88d27bd5b074c431218fd982c0af97798afd7aef93ec7fbae346919a1c26067453971510c9c5308bf3aa9e4#npm:10.1.0"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["fast-deep-equal", "npm:3.1.3"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["youtube-player", "npm:5.5.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["read", [\
         ["npm:1.0.7", {\
           "packageLocation": "./.yarn/cache/read-npm-1.0.7-950ec74ca8-2777c254e5.zip/node_modules/read/",\
@@ -18662,6 +18789,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["scriptjs", [\
+        ["npm:2.5.9", {\
+          "packageLocation": "./.yarn/cache/scriptjs-npm-2.5.9-48fe58b598-fc84cb6b60.zip/node_modules/scriptjs/",\
+          "packageDependencies": [\
+            ["scriptjs", "npm:2.5.9"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["section-matter", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/section-matter-npm-1.0.0-2f79fd59d6-3cc4131705.zip/node_modules/section-matter/",\
@@ -18943,6 +19079,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["simple-swizzle", "npm:0.2.2"],\
             ["is-arrayish", "npm:0.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["sister", [\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/sister-npm-3.0.2-bdf9c0b44b-8a1eb9d20a.zip/node_modules/sister/",\
+          "packageDependencies": [\
+            ["sister", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -19890,6 +20035,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:18.2.0"],\
             ["react-is", "npm:18.2.0"],\
+            ["react-social-media-embed", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:2.3.5"],\
             ["styled-components", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:6.0.0-rc.2-4007"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
@@ -21143,6 +21289,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["yoga-layout-prebuilt", "npm:1.10.0"],\
             ["@types/yoga-layout", "npm:1.9.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["youtube-player", [\
+        ["npm:5.5.2", {\
+          "packageLocation": "./.yarn/cache/youtube-player-npm-5.5.2-f66fa65a7d-42693af5d7.zip/node_modules/youtube-player/",\
+          "packageDependencies": [\
+            ["youtube-player", "npm:5.5.2"],\
+            ["debug", "virtual:e0cd6afa69db469de21c754be1546e018ea723a8653bf7c1fdbb52b3d67b9c4065461f2d7632852c8644c3b36b5304269483ba2eb51ad39f9eae03847036d7a9#npm:2.6.9"],\
+            ["load-script", "npm:1.0.0"],\
+            ["sister", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
