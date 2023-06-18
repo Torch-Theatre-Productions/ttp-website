@@ -55,28 +55,28 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
       {/* Bios */}
       <Biographies />
 
-      <QueersQuote num={2} />
+      <QueersQuote num={4} />
       {/* About Torch */}
       <QueersSection>
         <AboutTorch />
       </QueersSection>
 
-      <QueersQuote num={3} />
+      <QueersQuote num={5} />
       {/* Acknowledgements */}
       <QueersSection>
         <Acknowledgements />
       </QueersSection>
 
-      <QueersQuote num={4} />
+      <QueersQuote num={6} />
       {/* Pride */}
       <QueersSection>
         <OxfordPride />
       </QueersSection>
 
-      <QueersQuote num={5} />
+      <QueersQuote num={7} />
       {/* Further reading and Promo */}
       <More />
-      <QueersQuote num={6} />
+      <QueersQuote num={8} />
     </QueersMain>
   );
 };
