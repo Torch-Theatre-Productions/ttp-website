@@ -32,7 +32,7 @@ production, it can be difficult to be sure whether you're on track to succeed,
 but knowing these two have your back helps a lot.
 
 And finally, to **you!** Thank you so much for grabbing a ticket and coming to
-support us. This project means a lot to us all, and I hope that some of the
+support us. This project means a lot to us all, and I hope that the
 pieces you're about to see move you in the ways they've moved us.
 
 **Chris Johnstone**
