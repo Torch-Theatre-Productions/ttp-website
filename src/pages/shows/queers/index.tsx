@@ -4,7 +4,7 @@ import { theme } from "./components/.theme";
 
 // Images
 import Brick from "./data/images/brick.png";
-import QueersLogo from "./data/images/queerslogo.png";
+import QueersLogo from "./data/images/queerslogocropped.png";
 
 // Programme Content
 import Welcome from "./data/welcome.md";
@@ -33,7 +33,10 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
 ) => {
   return (
     <QueersMain>
-      <img src={QueersLogo} />
+      <img
+        src={QueersLogo}
+        style={{ marginTop: "2.5rem", marginBottom: "2.5rem" }}
+      />
       <QueersSection>
         {/* Welcome notes */}
         <Welcome />
