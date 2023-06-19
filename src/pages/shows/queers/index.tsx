@@ -13,7 +13,7 @@ import AboutQueers from "./data/aboutQueers.md";
 import PerformanceInfo from "./data/performance.mdx";
 import Acknowledgements from "./data/acknowlegements.md";
 import Biographies from "./data/biographies.mdx";
-import OxfordPride from "./data/oxfordPride.md";
+import OxfordPride from "./data/oxfordPride.mdx";
 import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
 import QueersQuote from "./components/QueersQuote";
@@ -34,17 +34,13 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
   return (
     <QueersMain>
       <img src={QueersLogo} />
-      {/* Welcome notes */}
       <QueersSection>
+        {/* Welcome notes */}
         <Welcome />
-      </QueersSection>
-
-      {/* About Queers */}
-      <QueersSection>
+        {/* About Queers */}
         <AboutQueers />
+        <QueersQuote num={0} />
       </QueersSection>
-
-      <QueersQuote num={0} />
 
       {/* Cast List/Performance Info */}
       <QueersSection>
@@ -76,8 +72,7 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
       <QueersQuote num={7} />
       {/* Further reading and Promo */}
       <More />
-      <QueersQuote num={8} />
-      <p>v1.0.5</p>
+      <p style={{ textAlign: "right" }}>v1.0.6</p>
     </QueersMain>
   );
 };

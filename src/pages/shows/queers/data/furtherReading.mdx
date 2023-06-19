@@ -1,12 +1,18 @@
+import QueersQuote from "../components/QueersQuote";
 import { InstagramEmbed } from "react-social-media-embed";
 import RomeoAndJuliet from "./images/randjposter.jpg";
+import MacbethMuchAdo from "./images/macbethmuchado.jpg";
+import RecruitingOfficer from "./images/recruitingofficer.png";
 import styled from "styled-components";
 import { theme } from "../components/.theme";
 import Helmet from "react-helmet";
 
-export const InstaDiv = styled.div`
+export const CenteredFlex = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+export const InstaDiv = styled(CenteredFlex)`
   margin: ${theme.padding.top}rem ${theme.padding.left * -2}rem ${theme.padding
       .top}rem;
 `;
@@ -53,8 +59,30 @@ Queers](https://nickhernbooksblog.com/2017/07/27/lets-not-forget-how-far-we-have
 
 Facts and figures quoted throughout the programme taken from [this source.](https://www.stonewall.org.uk/cy/lgbtq-facts-and-figures)
 
+<QueersQuote num={8} />
+
 ## Other shows
 
-<a href="https://www.oxfordcastleandprison.co.uk/events/event/romeo-juliet/">
-  <img src={RomeoAndJuliet} />
-</a>
+**Wild Goose Theatre** - _Romeo and Juliet_, 3rd July - 29th July
+
+<CenteredFlex>
+  <a href="https://www.oxfordcastleandprison.co.uk/events/event/romeo-juliet/">
+    <img src={RomeoAndJuliet} />
+  </a>
+</CenteredFlex>
+
+**BMH Productions** - _Macbeth_ and _Much Ado about Nothing_, 19th June - 1st July
+
+<CenteredFlex>
+  <a href="https://www.oxfordcastleandprison.co.uk/events/event/macbeth_much_ado_about_nothing/">
+    <img src={MacbethMuchAdo} />
+  </a>
+</CenteredFlex>
+
+**Oxford Theatre Guild** - _The Recruiting Officer_, 11th July - 22nd July
+
+<CenteredFlex>
+  <a href="https://www.ticketsoxford.com/events/the-recruiting-officer">
+    <img src={RecruitingOfficer} />
+  </a>
+</CenteredFlex>
