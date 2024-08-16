@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { theme } from "./.theme";
+import { theme } from "../../components/.theme";
 
 const QuoteWrapper = styled.blockquote`
   position: relative;

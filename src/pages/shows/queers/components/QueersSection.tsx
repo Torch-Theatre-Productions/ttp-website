@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "./.theme";
+import { theme } from "../../components/.theme";
 
 export const QueersSection = styled.div`
   padding-top: ${theme.padding.top}rem;
