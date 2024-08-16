@@ -20,9 +20,7 @@
     "@mdx-js/react": "^2.3.0",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^5.11.0",
-    "gatsby-plugin-instagram-embed": "^4.0.0",
     "gatsby-plugin-mdx": "^5.11.0",
-    "gatsby-plugin-react-helmet": "^6.11.0",
     "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gh-pages": "^5.0.0",
@@ -38,9 +36,9 @@
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "typescript": "^4.9.5"
+    "typescript": "^5.5.4"
   },
-  "packageManager": "yarn@3.4.1",
+  "packageManager": "yarn@4.4.0",
   "dependenciesMeta": {
     "gatsby@5.11.0": {
       "unplugged": true
