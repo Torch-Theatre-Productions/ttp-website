@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 export interface IBioProps {
   name: string;
   role: string | string[];
-  image?: string;
+  image?: ImageDataLike;
   roleIn?: string | string[];
   bio?: React.ReactNode;
   category?: string;
@@ -38,7 +38,7 @@ const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
   return (
     <>
       <NameAndImageHeader>
-        {image && <BioImage image={image} />}
+        {image && <BioImage image={image} alt={`${name} headshot`}/>}
         <div>
           <h2>{name}</h2>
           <p>

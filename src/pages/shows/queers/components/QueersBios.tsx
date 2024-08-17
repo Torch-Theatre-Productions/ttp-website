@@ -22,8 +22,10 @@ const useQueersHeadshotsByName = () => {
       ) {
         edges {
           node {
-            publicURL
             name
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
       }
@@ -31,10 +33,10 @@ const useQueersHeadshotsByName = () => {
   `).headshots.edges;
 
   // Pivot them by name so we can attach them to the JSON
-  const headshotsByName = data.reduce((acc, { node: { name, publicURL } }) => {
-    acc[name] = publicURL;
+  const headshotsByName = data.reduce((acc, { node }) => {
+    acc[node.name] = node;
     return acc;
-  }, {} as { [name: string]: string });
+  }, {} as { [name: string]: any });
 
   return headshotsByName;
 };
