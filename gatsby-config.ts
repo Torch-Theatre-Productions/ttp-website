@@ -14,13 +14,25 @@ const config: GatsbyConfig = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    { resolve: "gatsby-plugin-mdx", options: { extensions: [".mdx", ".md"] } },
+    // {
+    //   resolve: "gatsby-mdx-fix",
+    //   options: {
+    //     gatsbyRemarkPlugins: ["gatsby-remark-images"],
+    //   },
+    // },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: ["gatsby-remark-images"],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
         path: "./src/pages/",
-        ignore: [`**/\.*`],
+        ignore: [`**/\.*`, "shows/**/*"],
       },
       __key: "pages",
     },
