@@ -2,10 +2,6 @@ import * as React from "react";
 import { styled } from "styled-components";
 import { theme } from "../components/.theme";
 
-// Images
-import Brick from "./data/images/brick.png";
-import QueersLogo from "./data/images/queerslogocropped.png";
-
 // Programme Content
 import Welcome from "./data/welcome.md";
 import AboutTorch from "./data/aboutTorch.md";
@@ -17,12 +13,13 @@ import OxfordPride from "./data/oxfordPride.mdx";
 import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
 import QueersQuote from "./components/QueersQuote";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface IQueersProgrammeProps {}
 
 const QueersMain = styled.div`
   padding: ${theme.doublePadding};
-  background: url(${Brick});
+  background: url(./data/images/brick.png);
   * {
     color: ${theme.foreground};
   }
@@ -33,8 +30,9 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
 ) => {
   return (
     <QueersMain>
-      <img
-        src={QueersLogo}
+      <StaticImage
+        src="./data/images/queerslogocropped.png"
+        alt="Queers Logo"
         style={{ marginTop: "2.5rem", marginBottom: "2.5rem" }}
       />
       <QueersSection>

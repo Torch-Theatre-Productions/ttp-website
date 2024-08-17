@@ -12,6 +12,8 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     { resolve: "gatsby-plugin-mdx", options: { extensions: [".mdx", ".md"] } },
     {
       resolve: "gatsby-source-filesystem",
