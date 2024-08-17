@@ -27,6 +27,7 @@
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
     "gh-pages": "^5.0.0",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",

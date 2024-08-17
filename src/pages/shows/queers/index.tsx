@@ -8,7 +8,7 @@ import AboutTorch from "./data/aboutTorch.md";
 import AboutQueers from "./data/aboutQueers.md";
 import PerformanceInfo from "./data/performance.mdx";
 import Acknowledgements from "./data/acknowlegements.md";
-import Biographies from "./data/biographies.mdx";
+// import Biographies from "./data/biographies.mdx";
 import OxfordPride from "./data/oxfordPride.mdx";
 import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
@@ -19,7 +19,7 @@ interface IQueersProgrammeProps {}
 
 const QueersMain = styled.div`
   padding: ${theme.doublePadding};
-  background: url(./data/images/brick.png);
+  background: url("./data/images/brick.png");
   * {
     color: ${theme.foreground};
   }
@@ -50,7 +50,7 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
 
       <QueersQuote num={1} />
       {/* Bios */}
-      <Biographies />
+      {/* <Biographies /> */}
 
       <QueersQuote num={4} />
       {/* About Torch */}

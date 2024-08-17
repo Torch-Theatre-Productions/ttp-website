@@ -41,6 +41,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-styled-components", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:6.11.0"],\
           ["gatsby-remark-images", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:7.13.1"],\
           ["gatsby-source-filesystem", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
+          ["gatsby-transformer-sharp", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
           ["gh-pages", "npm:5.0.0"],\
           ["mkdirp", "npm:3.0.1"],\
           ["path-browserify", "npm:1.0.1"],\
@@ -12908,6 +12909,40 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["gatsby-transformer-sharp", [\
+      ["npm:5.13.1", {\
+        "packageLocation": "./.yarn/cache/gatsby-transformer-sharp-npm-5.13.1-264e17d77c-6a11b5cc74.zip/node_modules/gatsby-transformer-sharp/",\
+        "packageDependencies": [\
+          ["gatsby-transformer-sharp", "npm:5.13.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1", {\
+        "packageLocation": "./.yarn/__virtual__/gatsby-transformer-sharp-virtual-e2ad9ab50c/0/cache/gatsby-transformer-sharp-npm-5.13.1-264e17d77c-6a11b5cc74.zip/node_modules/gatsby-transformer-sharp/",\
+        "packageDependencies": [\
+          ["gatsby-transformer-sharp", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
+          ["@babel/runtime", "npm:7.21.0"],\
+          ["@types/gatsby", null],\
+          ["@types/gatsby-plugin-sharp", null],\
+          ["bluebird", "npm:3.7.2"],\
+          ["common-tags", "npm:1.8.2"],\
+          ["fs-extra", "npm:11.1.1"],\
+          ["gatsby", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.11.0"],\
+          ["gatsby-plugin-sharp", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
+          ["gatsby-plugin-utils", "virtual:676e7b9dafacb649394b7b28d837522b1be3f0d779c9cf3467176da908d1e28616d78929b82023672a763a8489321a182a57f1e3c972ddf57b700d330375ff93#npm:4.13.1"],\
+          ["probe-image-size", "npm:7.2.3"],\
+          ["semver", "npm:7.6.3"],\
+          ["sharp", "npm:0.32.6"]\
+        ],\
+        "packagePeers": [\
+          "@types/gatsby-plugin-sharp",\
+          "@types/gatsby",\
+          "gatsby-plugin-sharp",\
+          "gatsby"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["gatsby-worker", [\
       ["npm:2.11.0", {\
         "packageLocation": "./.yarn/cache/gatsby-worker-npm-2.11.0-e874d1214f-fe614f3a82.zip/node_modules/gatsby-worker/",\
@@ -21372,6 +21407,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-styled-components", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:6.11.0"],\
           ["gatsby-remark-images", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:7.13.1"],\
           ["gatsby-source-filesystem", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
+          ["gatsby-transformer-sharp", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
           ["gh-pages", "npm:5.0.0"],\
           ["mkdirp", "npm:3.0.1"],\
           ["path-browserify", "npm:1.0.1"],\

@@ -1,3 +1,4 @@
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as React from "react";
 import { styled } from "styled-components";
 
@@ -10,7 +11,7 @@ export interface IBioProps {
   category?: string;
 }
 
-const BioImage = styled.img`
+const BioImage = styled(GatsbyImage)`
   height: 7rem;
   width: 7rem;
   object-fit: cover;
@@ -33,11 +34,11 @@ const NameAndImageHeader = styled.div`
 const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
   const roleString = Array.isArray(role) ? role.join(", ") : role;
   const inString = Array.isArray(roleIn) ? roleIn.join(", ") : roleIn;
-
+  image = getImage(image)
   return (
     <>
       <NameAndImageHeader>
-        {image && <BioImage src={image} />}
+        {image && <BioImage image={image} />}
         <div>
           <h2>{name}</h2>
           <p>
