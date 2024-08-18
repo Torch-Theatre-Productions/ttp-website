@@ -1,4 +1,4 @@
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import * as React from "react";
 import { styled } from "styled-components";
 
@@ -34,7 +34,7 @@ const NameAndImageHeader = styled.div`
 const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
   const roleString = Array.isArray(role) ? role.join(", ") : role;
   const inString = Array.isArray(roleIn) ? roleIn.join(", ") : roleIn;
-  image = getImage(image)
+  image = getImage(image || null)
   return (
     <>
       <NameAndImageHeader>
