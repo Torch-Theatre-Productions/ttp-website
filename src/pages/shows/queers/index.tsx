@@ -20,7 +20,7 @@ interface IQueersProgrammeProps {}
 const QueersMain = styled.div`
   padding: ${theme.doublePadding};
   background: black;
-  background-image: url("./data/images/brick.png");
+  background-image: url("data/images/brick.png");
   * {
     color: ${theme.foreground};
   }
@@ -34,18 +34,21 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
       <StaticImage
         src="./data/images/queerslogocropped.png"
         alt="Queers Logo"
-        style={{ marginTop: "2.5rem", marginBottom: "2.5rem" }}
+        imgStyle={{ marginTop: "2.5rem", marginBottom: "2.5rem" }}
       />
       <QueersSection>
         {/* Welcome notes */}
         <Welcome />
+      </QueersSection>
         {/* About Queers */}
+      <QueersSection>
         <AboutQueers />
         <QueersQuote num={0} />
       </QueersSection>
 
       {/* Cast List/Performance Info */}
       <QueersSection>
+        <StaticImage src="./data/images/queerslogocropped.png" alt="Queers Logo"/>
         <PerformanceInfo />
       </QueersSection>
 

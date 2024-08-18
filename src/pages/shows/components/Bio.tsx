@@ -12,22 +12,26 @@ export interface IBioProps {
 }
 
 const BioImage = styled(GatsbyImage)`
-  height: 7rem;
-  width: 7rem;
-  object-fit: cover;
-
-  border-radius: 50%;
-  image-rendering: crisp-edges;
-  filter: grayscale(1);
 `;
 
 const NameAndImageHeader = styled.div`
   display: flex;
   gap: 2rem;
+  margin-bottom: 1.45rem;
 
   align-items: center;
-  h2 {
+  h2,p {
     margin-bottom: 0;
+  }
+  
+  img {
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+    
+    border-radius: 50%;
+    image-rendering: crisp-edges;
+    filter: grayscale(1);
   }
 `;
 
@@ -38,7 +42,7 @@ const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
   return (
     <>
       <NameAndImageHeader>
-        {image && <BioImage image={image} alt={`${name} headshot`}/>}
+        {image && <GatsbyImage image={image} alt={`${name} headshot`}/>}
         <div>
           <h2>{name}</h2>
           <p>
