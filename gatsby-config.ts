@@ -12,15 +12,28 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-instagram-embed",
-    { resolve: "gatsby-plugin-mdx", options: { extensions: [".mdx", ".md"] } },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    // {
+    //   resolve: "gatsby-mdx-fix",
+    //   options: {
+    //     gatsbyRemarkPlugins: ["gatsby-remark-images"],
+    //   },
+    // },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: ["gatsby-remark-images"],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
         path: "./src/pages/",
-        ignore: [`**/\.*`],
+        ignore: [`**/\.*`, "shows/**/*"],
       },
       __key: "pages",
     },

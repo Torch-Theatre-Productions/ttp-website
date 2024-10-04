@@ -1,10 +1,6 @@
 import * as React from "react";
 import { styled } from "styled-components";
-import { theme } from "./components/.theme";
-
-// Images
-import Brick from "./data/images/brick.png";
-import QueersLogo from "./data/images/queerslogocropped.png";
+import { theme } from "../components/.theme";
 
 // Programme Content
 import Welcome from "./data/welcome.md";
@@ -17,12 +13,14 @@ import OxfordPride from "./data/oxfordPride.mdx";
 import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
 import QueersQuote from "./components/QueersQuote";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface IQueersProgrammeProps {}
 
 const QueersMain = styled.div`
   padding: ${theme.doublePadding};
-  background: url(${Brick});
+  background: black;
+  background-image: url("data/images/brick.png");
   * {
     color: ${theme.foreground};
   }
@@ -33,20 +31,24 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
 ) => {
   return (
     <QueersMain>
-      <img
-        src={QueersLogo}
-        style={{ marginTop: "2.5rem", marginBottom: "2.5rem" }}
+      <StaticImage
+        src="./data/images/queerslogocropped.png"
+        alt="Queers Logo"
+        imgStyle={{ marginTop: "2.5rem", marginBottom: "2.5rem" }}
       />
       <QueersSection>
         {/* Welcome notes */}
         <Welcome />
+      </QueersSection>
         {/* About Queers */}
+      <QueersSection>
         <AboutQueers />
         <QueersQuote num={0} />
       </QueersSection>
 
       {/* Cast List/Performance Info */}
       <QueersSection>
+        <StaticImage src="./data/images/queerslogocropped.png" alt="Queers Logo"/>
         <PerformanceInfo />
       </QueersSection>
 
