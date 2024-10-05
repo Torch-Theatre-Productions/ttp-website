@@ -1,6 +1,7 @@
 import * as React from "react";
 import { IBioProps, default as Bio } from "./Bio";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
+import ReactMarkdown from "react-markdown";
 
 interface HeadshotsQuery {
   node: {
@@ -22,43 +23,41 @@ interface AllBioData {
   bioData: { nodes: BioQuery[] };
 }
 
-const getBiographyData = (): AllBioData => {
-  return useStaticQuery(graphql`
-    query ($biosDataPath: String!) {
-      headshots: allFile(
-        filter: {
-          relativePath: { regex: $biosDataPath }
-          extension: { eq: "jpg" }
-        }
-      ) {
-        edges {
-          node {
-            name
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
+export const bioQuery = () => graphql`
+  query ($biosDataPath: String!) {
+    headshots: allFile(
+      filter: {
+        relativePath: { regex: $biosDataPath }
+        extension: { eq: "jpg" }
       }
-      bioData: allFile(
-        filter: {
-          relativePath: { regex: $biosDataPath }
-          extension: { eq: "json" }
-        }
-      ) {
-        nodes {
-          id
+    ) {
+      edges {
+        node {
           name
-          childMdx {
-            body
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }
     }
-  `);
-};
+    bioData: allFile(
+      filter: {
+        relativePath: { regex: $biosDataPath }
+        extension: { eq: "md" }
+      }
+    ) {
+      nodes {
+        id
+        name
+        childMdx {
+          body
+        }
+      }
+    }
+  }
+`;
 
-const pivotBiographyData = (data: AllBioData) => {
+export const pivotBiographyData = (data: AllBioData) => {
   const biosByName = data.bioData.nodes.reduce((acc, { name, childMdx }) => {
     acc[name] = childMdx.body;
     return acc;
@@ -73,25 +72,36 @@ const pivotBiographyData = (data: AllBioData) => {
 };
 
 interface BiographiesProps {
-  configuration: any;
+  configuration: IBioProps[];
+  wrapper?: string | React.FC<any>;
+  data: { headshotsByName: any; biosByName: any };
+  render?: React.FCwC<IBioProps>;
 }
 
-const Biographies = ({ configuration }: BiographiesProps) => {
-  const { biosByName, headshotsByName } = pivotBiographyData(
-    getBiographyData()
-  );
+const Biographies = ({
+  wrapper,
+  configuration,
+  data,
+  render,
+}: BiographiesProps) => {
+  const { biosByName, headshotsByName } = data;
+
+  const Wrapper = wrapper || "div";
+  const InnerBio = render || Bio;
 
   return (
-    <div>
+    <Wrapper>
       {configuration.map((bio: IBioProps) => (
-        <Bio
+        <InnerBio
           key={bio.name}
-          bio={biosByName[bio.name]}
-          image={headshotsByName[bio.name]}
-          {...bio}
+          bio={<ReactMarkdown>{biosByName[bio.bio]}</ReactMarkdown>}
+          image={headshotsByName[bio.image]}
+          name={bio.name}
+          role={bio.role}
+          roleIn={bio.roleIn}
         />
       ))}
-    </div>
+    </Wrapper>
   );
 };
 
