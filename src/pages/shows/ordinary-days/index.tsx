@@ -16,7 +16,7 @@ import Acknowledgements from "./data/acknowlegements.md";
 import AboutTorch from "./data/aboutTorch.md";
 import { graphql } from "gatsby";
 import Bio, { IBioProps } from "../components/Bio";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 interface IOrdyDaysProgrammeProps {
   data: any;
@@ -69,6 +69,38 @@ const ODBioWrapper = styled.div`
   }
 
   margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    grid-row-gap: 1rem;
+
+    .bio-image {
+      grid-row: 2;
+      grid-column: 1;
+      max-height: 50vh;
+      max-width: 75%;
+      justify-self: center;
+
+      img {
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    .bio-header {
+      grid-column: 1;
+      grid-row: 1;
+      // text-align: center;
+    }
+
+    .bio-bio {
+      grid-column: 1;
+      grid-row: 3;
+      // text-align: center;
+    }
+  }
 `;
 
 const ODBioRender: React.FCwC<IBioProps> = ({
@@ -164,13 +196,29 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           data={dataByName}
         />
       </OrdinaryDaysSection>
-
       <OrdinaryDaysSection>
         <AboutTorch />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <Acknowledgements />
       </OrdinaryDaysSection>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "end",
+          alignItems: "end",
+        }}
+      >
+        <StaticImage
+          src="../../../components/torch.png"
+          alt="torch logo"
+          height={54}
+          width={117}
+          style={{
+            height: "3rem",
+          }}
+        />
+      </div>
     </OrdinaryDaysMain>
   );
 };
