@@ -3,6 +3,10 @@ import { InstagramEmbed } from "react-social-media-embed";
 import styled from "styled-components";
 import { theme } from "../../components/.theme";
 import Helmet from "react-helmet";
+import {StaticImage} from "gatsby-plugin-image";
+
+import RCO from "./images/recruitingofficer.png"
+
 
 export const CenteredFlex = styled.div`
   display: flex;
@@ -70,28 +74,29 @@ Facts and figures quoted throughout the programme taken from [this source.](http
 
 <QueersQuote num={8} />
 
-## Other shows
+{/* ## Other shows
 
 **Wild Goose Theatre** - _Romeo and Juliet_, 3rd July - 29th July
 
 <CenteredFlex>
   <a href="https://www.oxfordcastleandprison.co.uk/events/event/romeo-juliet/">
-    <img src="./images/randjposter.jpg" />
+    <StaticImage src="./images/randjposter.jpg" />
   </a>
 </CenteredFlex>
 
 **BMH Productions** - _Macbeth_ and _Much Ado about Nothing_, 19th June - 1st July
 
 <CenteredFlex>
+    <StaticImage as="a" src="./images/macbethmuchado.jpg" />
   <a href="https://www.oxfordcastleandprison.co.uk/events/event/macbeth_much_ado_about_nothing/">
-    <img src="./images/macbethmuchado.jpg" />
   </a>
 </CenteredFlex>
 
 **Oxford Theatre Guild** - _The Recruiting Officer_, 11th July - 22nd July
 
 <CenteredFlex>
+  <StaticImage as="a" src="./data/images/recruitingofficer.png"/>
   <a href="https://www.ticketsoxford.com/events/the-recruiting-officer">
-    <img src="./images/recruitingofficer.png" />
+    <img src={RCO} />
   </a>
-</CenteredFlex>
+</CenteredFlex> */}

@@ -64,3 +64,7 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
 };
 
 export default OrdinaryDaysProgramme;
+
+export const context = {
+  biosDataPath: "src\/pages\/shows\/ordinary-days\/data\/bios",
+}
