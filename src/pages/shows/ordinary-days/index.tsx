@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import { theme } from "../components/.theme";
 import OrdinaryDaysSection from "./components/OrdinaryDaysSection";
 import Logo from "./data/images/ODLogo.png";
+import LogoWithGwon from "./data/images/ODLogoWithGwon.png";
 import Biographies, {
   bioQuery,
   pivotBiographyData,
@@ -17,6 +18,7 @@ import AboutTorch from "./data/aboutTorch.md";
 import { graphql } from "gatsby";
 import Bio, { IBioProps } from "../components/Bio";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { FlyerCard } from "./components/ODFlyerCard";
 
 interface IOrdyDaysProgrammeProps {
   data: any;
@@ -142,32 +144,62 @@ const ODBioRender: React.FCwC<IBioProps> = ({
   );
 };
 
+const LogoWithStyling: React.FCwC<{ style?: any }> = ({ style, ...props }) => {
+  return (
+    <div style={{ textAlign: "center" }}>
+      <img
+        src={Logo}
+        alt="Ordinary Days Logo"
+        style={{
+          marginBottom: "0rem",
+          marginTop: "1rem",
+          maxHeight: "10vh",
+          marginLeft: "auto",
+          marginRight: "auto",
+          ...style,
+        }}
+      />
+      <h2 style={{ fontFamily: "Century" }}>music and lyrics by adam gwon</h2>
+    </div>
+  );
+};
+
 const OrdinaryDaysProgramme: React.FunctionComponent<
   IOrdyDaysProgrammeProps
 > = ({ data, ...props }) => {
   const dataByName = pivotBiographyData(data);
   return (
     <OrdinaryDaysMain>
-      <img
-        src={Logo}
-        alt="Ordinary Days Logo"
-        style={{ marginTop: "4.5rem", marginBottom: "4.5rem" }}
-      />
-      <OrdinaryDaysSection>
-        <Welcome />
-      </OrdinaryDaysSection>
-      <OrdinaryDaysSection>
-        <AboutTheShow />
-      </OrdinaryDaysSection>
-      <OrdinaryDaysSection>
-        <img
-          src={Logo}
-          alt="Ordinary Days Logo"
-          style={{ marginTop: "4.5rem", marginBottom: "4.5rem" }}
+      <OrdinaryDaysSection style={{ textAlign: "center" }}>
+        <LogoWithStyling />
+        <StaticImage
+          src={"./data/images/ArtworkHero.png"}
+          alt="silhouette in front of an artpiece"
+          style={{
+            maxHeight: "70vh",
+            objectFit: "contain",
+            marginBottom: "4.5rem",
+          }}
+          imgStyle={{
+            objectFit: "contain",
+            borderRadius: "3rem",
+          }}
         />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
+        <Welcome />
+        <FlyerCard quoteIdx={0} />
+      </OrdinaryDaysSection>
+      <OrdinaryDaysSection>
+        <AboutTheShow />
+        <FlyerCard quoteIdx={1} />
+      </OrdinaryDaysSection>
+      <OrdinaryDaysSection>
+        <LogoWithStyling />
+      </OrdinaryDaysSection>
+      <OrdinaryDaysSection>
         <PerformanceInfo />
+        <FlyerCard quoteIdx={3} />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <h1>Biographies</h1>
@@ -179,6 +211,7 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           )}
           data={dataByName}
         />
+        <FlyerCard quoteIdx={3} />
         <h2>Cast</h2>
         <Biographies
           render={ODBioRender}
@@ -187,6 +220,7 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           )}
           data={dataByName}
         />
+        <FlyerCard quoteIdx={4} />
         <h2>Production team</h2>
         <Biographies
           render={ODBioRender}
@@ -196,9 +230,11 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           data={dataByName}
         />
       </OrdinaryDaysSection>
+      <FlyerCard quoteIdx={5} />
       <OrdinaryDaysSection>
         <AboutTorch />
       </OrdinaryDaysSection>
+      <FlyerCard quoteIdx={6} />
       <OrdinaryDaysSection>
         <Acknowledgements />
       </OrdinaryDaysSection>
@@ -212,11 +248,8 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
         <StaticImage
           src="../../../components/torch.png"
           alt="torch logo"
-          height={54}
+          height={60}
           width={117}
-          style={{
-            height: "3rem",
-          }}
         />
       </div>
     </OrdinaryDaysMain>

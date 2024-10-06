@@ -15,7 +15,13 @@ export const Header = ({}) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <StaticImage src="torch.png" alt="torch logo" height={54} width={117} style={{ height: "3rem", margin: 0 }} />
+      <StaticImage
+        src="torch.png"
+        alt="torch logo"
+        height={54}
+        width={117}
+        style={{ margin: 0 }}
+      />
       {/* <Link
         to="/"
         style={{
