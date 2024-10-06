@@ -14,13 +14,15 @@ import More from "./data/furtherReading.mdx";
 import { QueersSection } from "./components/QueersSection";
 import QueersQuote from "./components/QueersQuote";
 import { StaticImage } from "gatsby-plugin-image";
+// @ts-ignore
+import Brick from "./data/images/brick.png";
 
 interface IQueersProgrammeProps {}
 
-const QueersMain = styled.div`
+const QueersProgrammeMain = styled.div`
   padding: ${theme.doublePadding};
   background: black;
-  background-image: url("data/images/brick.png");
+  background-image: url(${Brick});
   * {
     color: ${theme.foreground};
   }
@@ -30,7 +32,7 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
   props
 ) => {
   return (
-    <QueersMain>
+    <QueersProgrammeMain>
       <StaticImage
         src="./data/images/queerslogocropped.png"
         alt="Queers Logo"
@@ -40,7 +42,7 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
         {/* Welcome notes */}
         <Welcome />
       </QueersSection>
-        {/* About Queers */}
+      {/* About Queers */}
       <QueersSection>
         <AboutQueers />
         <QueersQuote num={0} />
@@ -48,7 +50,10 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
 
       {/* Cast List/Performance Info */}
       <QueersSection>
-        <StaticImage src="./data/images/queerslogocropped.png" alt="Queers Logo"/>
+        <StaticImage
+          src="./data/images/queerslogocropped.png"
+          alt="Queers Logo"
+        />
         <PerformanceInfo />
       </QueersSection>
 
@@ -78,7 +83,7 @@ const QueersProgramme: React.FunctionComponent<IQueersProgrammeProps> = (
       {/* Further reading and Promo */}
       <More />
       <p style={{ textAlign: "right" }}>v1.0.6</p>
-    </QueersMain>
+    </QueersProgrammeMain>
   );
 };
 

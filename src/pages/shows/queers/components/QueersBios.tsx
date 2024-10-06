@@ -3,6 +3,7 @@ import * as path from "path";
 import { IBioProps, default as Bio } from "../../components/Bio";
 import { graphql, useStaticQuery } from "gatsby";
 import { QueersSection } from "./QueersSection";
+import styled from "styled-components";
 
 interface HeadshotsQuery {
   node: {
@@ -57,6 +58,14 @@ interface QueersBiosProps {
   category: string;
 }
 
+const QueersBio = styled(Bio)`
+  img {
+    border-radius: 50%;
+    image-rendering: crisp-edges;
+    filter: grayscale(1);
+  }
+`;
+
 const QueersBios = ({ category }: QueersBiosProps) => {
   // First query for the headshot image URLs
   const headshotsByName = useQueersHeadshotsByName();
@@ -73,7 +82,7 @@ const QueersBios = ({ category }: QueersBiosProps) => {
     const BioMdx = LazyBiosByName[bio.name];
     return (
       <QueersSection key={bio.name}>
-        <Bio {...bio} bio={BioMdx ? <BioMdx /> : undefined} />
+        <QueersBio {...bio} bio={BioMdx ? <BioMdx /> : undefined} />
       </QueersSection>
     );
   });

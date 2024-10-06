@@ -1,0 +1,78 @@
+import { styled } from "styled-components";
+import {FlyerCard} from "../components/ODFlyerCard"
+
+export const SongList = styled.div`
+  > ol {
+    
+    display: grid;
+    width: auto
+
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+
+
+  @media all and (min-width: 830px) { 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(11, 2rem);
+  }
+
+
+    
+  }
+`
+
+<>
+<div style={{marginBottom: "2rem"}}>
+<p style={{textAlign: "center"}}>
+  Music and lyrics by Adam Gwon
+
+  17 - 19th October 2024
+  <br/>Old Fire Station, Oxford
+
+  Originally Produced in New York City by Roundabout Theatre Company
+  Todd Haimes, Artistic Director; Harold Wolpert, Managing Director; Julia C. Levy, Executive Director
+  as part of Roundabout Underground
+  at the Harold and Miriam Steinberg Center for Theatre
+  **ORDINARY DAYS** was presented at the
+  National Alliance for Musical Theatre's Festival of New Musicals in 2008.
+  
+  <p><a>www.namt.org</a></p>
+
+
+  <p>
+    **ORDINARY DAYS** was originally produced and performed by
+    Pennsylvania Centre Stage at Penn State University.<br/>
+    **ORDINARY DAYS** was first developed by
+    New York Theatre Barn in New York City in 2007.
+  </p>
+
+The videotaping or making of electronic or other audio and/or visual recordings or streams of this production is
+strictly prohibited and a violation of United Kingdom Copyright, Designs and Patents Act 1988.
+</p>
+</div>
+<FlyerCard quoteIdx={2} />
+<SongList>
+<h1>Song list</h1>
+ 1. One by One by One - *(Warren, Company)*
+ 1. Don’t Wanna Be Here - *(Deb)*
+ 1. The Space Between - *(Jason)*
+ 1. Let Things Go - *(Claire)*
+ 1. Dear Professor Thompson (Part 1) - *(Deb)*
+ 1. Life Story - *(Warren)*
+ 1. Dear Professor Thompson (Part 2) - *(Deb)*
+ 1. I'm Trying - *(Claire, Jason)*
+ 1. Saturday at the Met - *(Company)*
+ 1. Favorite Places - *(Jason)*
+ 1. Sort-Of Fairy Tale - *(Warren, Deb)*
+ 1. Fine - *(Jason, Claire)*
+ 1. Big Picture - *(Company)*
+ 1. Hundred-Story City - *(Jason, Company)*
+ 1. Party Interlude - *(Claire)*
+ 1. Calm - *(Deb)*
+ 1. Life Story (Reprise) - *(Warren)*
+ 1. Gotta Get Out - *(Claire)*
+ 1. Rooftop Duet/Falling - *(Company)*
+ 1. I'll Be Here - *(Claire)*
+ 1. Beautiful - *(Warren, Deb)*
+</SongList>
+</>

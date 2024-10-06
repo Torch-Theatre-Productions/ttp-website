@@ -1,0 +1,68 @@
+{
+  "location": "ordinary-days/data/bios",
+  "bios": [
+    {
+      "name": "Victoria Wilson",
+      "role": ["Director", "Producer"],
+      "image": "victoria",
+      "bio": "victoria",
+      "category": "creative"
+    },
+    {
+      "name": "Chris Venthom",
+      "role": "Musical Director",
+      "image": "chris_v",
+      "bio": "chris_v",
+      "category": "creative"
+    },
+    {
+      "name": "Nicky Robinson",
+      "role": "Assistant Director",
+      "image": "nicky",
+      "bio": "nicky",
+      "category": "creative"
+    },
+    {
+      "name": "Gavin Wilson",
+      "role": "Stage Manager",
+      "image": "gavin",
+      "bio": "gavin",
+      "category": "production"
+    },
+    {
+      "name": "Will Penington",
+      "role": "Lighting and Sound Designer",
+      "image": "will",
+      "bio": "will",
+      "category": "production"
+    },
+    {
+      "name": "Hannah Veale",
+      "role": "Claire",
+      "image": "hannah",
+      "bio": "hannah",
+      "category": "cast"
+    },
+    {
+      "name": "Holly Prangley",
+      "role": "Deb",
+      "image": "holly",
+      "bio": "holly",
+      "category": "cast"
+    },
+    {
+      "name": "James Stubbs",
+      "role": "Warren",
+      "image": "james",
+      "bio": "james",
+      "category": "cast"
+    },
+    {
+      "name": "Chris Johnstone",
+      "role": "Jason",
+      "image": "chris_j",
+      "bio": "chris_j",
+      "category": "cast"
+    }
+  ]
+}

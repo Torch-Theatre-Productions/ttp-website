@@ -11,8 +11,7 @@ export interface IBioProps {
   category?: string;
 }
 
-const BioImage = styled(GatsbyImage)`
-`;
+const BioImage = styled(GatsbyImage)``;
 
 const NameAndImageHeader = styled.div`
   display: flex;
@@ -20,29 +19,36 @@ const NameAndImageHeader = styled.div`
   margin-bottom: 1.45rem;
 
   align-items: center;
-  h2,p {
+
+  h2,
+  p {
     margin-bottom: 0;
   }
-  
+
   img {
     height: 7rem;
     width: 7rem;
     object-fit: cover;
-    
-    border-radius: 50%;
+
     image-rendering: crisp-edges;
-    filter: grayscale(1);
   }
 `;
 
-const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
+const Bio: React.FCwC<IBioProps> = ({
+  name,
+  role,
+  image,
+  roleIn,
+  bio,
+  className,
+}) => {
   const roleString = Array.isArray(role) ? role.join(", ") : role;
   const inString = Array.isArray(roleIn) ? roleIn.join(", ") : roleIn;
-  image = getImage(image || null)
+  image = getImage(image || null);
   return (
-    <>
-      <NameAndImageHeader>
-        {image && <GatsbyImage image={image} alt={`${name} headshot`}/>}
+    <div className={className}>
+      <NameAndImageHeader className="bio-header">
+        {image && <GatsbyImage image={image} alt={`${name} headshot`} />}
         <div>
           <h2>{name}</h2>
           <p>
@@ -58,8 +64,8 @@ const Bio: React.FCwC<IBioProps> = ({ name, role, image, roleIn, bio }) => {
           </p>
         </div>
       </NameAndImageHeader>
-      {bio || undefined}
-    </>
+      <div className="bio-bio">{bio || undefined}</div>
+    </div>
   );
 };
 
