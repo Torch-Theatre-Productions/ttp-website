@@ -36,72 +36,62 @@ const bioConfig = require("./data/bios/bios.json");
 
 const ODBioWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 4rem 1fr;
+  margin-bottom: 2rem;
 
-  grid-column-gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+
+  grid-row-gap: 1rem;
 
   .bio-image {
-    height: unset;
-    width: unset;
-    max-height: 20rem;
-
-    grid-row: 1 / -1;
-
-    border-radius: 5px;
-
-    img {
-      image-rendering: auto;
-    }
+    grid-row: 2;
+    grid-column: 1;
+    max-height: 50vh;
+    max-width: 75%;
+    justify-self: center;
   }
 
   .bio-header {
-    grid-column: 2;
-    grid-row: 1;
     > * {
       margin-bottom: 0;
     }
-    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .bio-bio {
-    grid-column: 2;
-    grid-row: 2;
-
-    align-self: center;
+    grid-column: 1;
+    grid-row: 3;
   }
 
-  margin-bottom: 2rem;
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-
-    grid-row-gap: 1rem;
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 4rem 1fr;
 
     .bio-image {
-      grid-row: 2;
-      grid-column: 1;
-      max-height: 50vh;
-      max-width: 75%;
-      justify-self: center;
+      max-height: 20rem;
 
       img {
-        object-fit: cover;
-        object-position: top;
+        image-rendering: auto;
       }
+
+      grid-row: 2 / -1;
+      justify-self: left;
+      align-self: start;
     }
 
     .bio-header {
+      align-self: center;
+
       grid-column: 1;
       grid-row: 1;
-      // text-align: center;
     }
 
     .bio-bio {
-      grid-column: 1;
-      grid-row: 3;
-      // text-align: center;
+      align-self: center;
+
+      grid-column: 2;
+      grid-row: 2;
     }
   }
 `;
@@ -124,6 +114,7 @@ const ODBioRender: React.FCwC<IBioProps> = ({
           className="bio-image"
           image={image}
           alt={`${name} headshot`}
+          objectFit="contain"
         />
       )}
       <div className="bio-header">
