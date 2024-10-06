@@ -107,6 +107,6 @@
     "gatsby-node.js",
     "./gatsby-config.ts",
     "./plugins/**/*",
-    "src/pages/shows/components/.theme.ts"
+    "src/components/shows/.theme.ts"
   ]
 }

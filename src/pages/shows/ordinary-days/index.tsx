@@ -1,14 +1,14 @@
 import * as React from "react";
 
 import { styled } from "styled-components";
-import { theme } from "../components/.theme";
+import { theme } from "../../../components/shows/.theme";
 import OrdinaryDaysSection from "./components/OrdinaryDaysSection";
 import Logo from "./data/images/ODLogo.png";
 import LogoWithGwon from "./data/images/ODLogoWithGwon.png";
 import Biographies, {
   bioQuery,
   pivotBiographyData,
-} from "../components/Biographies";
+} from "../../../components/shows/Biographies";
 
 import Welcome from "./data/welcome.md";
 import AboutTheShow from "./data/aboutTheShow.md";
@@ -16,9 +16,10 @@ import PerformanceInfo from "./data/performance.mdx";
 import Acknowledgements from "./data/acknowlegements.md";
 import AboutTorch from "./data/aboutTorch.md";
 import { graphql } from "gatsby";
-import Bio, { IBioProps } from "../components/Bio";
+import Bio, { IBioProps } from "../../../components/shows/Bio";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { FlyerCard } from "./components/ODFlyerCard";
+import TorchLogo from "../../../components/general/TorchLogo";
 
 interface IOrdyDaysProgrammeProps {
   data: any;
@@ -245,19 +246,14 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           alignItems: "end",
         }}
       >
-        <StaticImage
-          src="../../../components/torch.png"
-          alt="torch logo"
-          height={60}
-          width={117}
-        />
+        <TorchLogo />
       </div>
     </OrdinaryDaysMain>
   );
 };
 
 export const query = graphql`
-  query ($biosDataPath: String!) {
+  query ($biosDataPath: String) {
     headshots: allFile(
       filter: {
         relativePath: { regex: $biosDataPath }
@@ -289,7 +285,5 @@ export const query = graphql`
     }
   }
 `;
-
-// export const query = bioQuery();
 
 export default OrdinaryDaysProgramme;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../components/.theme";
+import { theme } from "../../../../components/shows/.theme";
 
 export const OrdinaryDaysSection = styled.div`
   // min-height: calc(2 * ${theme.padding.top}rem);

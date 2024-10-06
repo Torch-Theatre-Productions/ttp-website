@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import TorchLogo from "./TorchLogo";
 
 export const Header = ({}) => (
   <header
@@ -15,13 +16,7 @@ export const Header = ({}) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <StaticImage
-        src="torch.png"
-        alt="torch logo"
-        height={54}
-        width={117}
-        style={{ margin: 0 }}
-      />
+      <TorchLogo />
       {/* <Link
         to="/"
         style={{

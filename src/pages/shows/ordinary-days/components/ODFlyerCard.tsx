@@ -29,7 +29,7 @@ export const FlyerCard: React.FCwC<{ quoteIdx: number }> = ({
   return (
     <FlyerCardCSSWrapper $quoteIdx={quoteIdx}>
       <StaticImage
-        src="./data/images/flyercard.png"
+        src="../data/images/flyercard.png"
         alt="a flyer background, a quote handed out by warren"
         style={{
           position: "relative",
@@ -52,8 +52,10 @@ export const FlyerCard: React.FCwC<{ quoteIdx: number }> = ({
           justifySelf: "center",
         }}
       >
-        {quotes[quoteIdx].toLowerCase()}
+        {quotes[quoteIdx]?.toLowerCase()}
       </p>
     </FlyerCardCSSWrapper>
   );
 };
+
+export default FlyerCard;

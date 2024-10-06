@@ -24,7 +24,7 @@ interface AllBioData {
 }
 
 export const bioQuery = () => graphql`
-  query ($biosDataPath: String!) {
+  query ($biosDataPath: String) {
     headshots: allFile(
       filter: {
         relativePath: { regex: $biosDataPath }

@@ -37,6 +37,20 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        name: "shows",
+        path: "./src/pages/shows",
+        ignore: {
+          patterns: [
+            `*.md?(x)`,
+            `shows/**/components/**/*`,
+            `shows/**/data/**/*`,
+          ],
+        },
+      },
+    },
   ],
 };
 

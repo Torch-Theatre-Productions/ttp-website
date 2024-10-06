@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as path from "path";
-import { IBioProps, default as Bio } from "../../components/Bio";
+import { IBioProps, default as Bio } from "../../../../components/shows/Bio";
 import { graphql, useStaticQuery } from "gatsby";
 import { QueersSection } from "./QueersSection";
 import styled from "styled-components";
