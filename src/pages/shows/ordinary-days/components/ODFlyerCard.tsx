@@ -1,14 +1,69 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import FlyerCardImage from "../data/images/flyercard.png";
 
 import styled from "styled-components";
 
 const FlyerCardCSSWrapper = styled.div<{ $quoteIdx: number }>`
-  text-align: center;
-  display: grid;
+  width: 100%;
+  display: flex;
 
-  img {
-    filter: hue-rotate(${(props) => props.$quoteIdx * 40}deg);
+  justify-content: center;
+
+  .cardBG {
+    text-align: center;
+    display: grid;
+
+    position: relative;
+
+    min-height: 300px;
+    max-width: 400px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+      background-image: url(${FlyerCardImage});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      filter: hue-rotate(${(props) => props.$quoteIdx * 140}deg);
+    }
+
+    p {
+      font-family: "dreaming-outloud-sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+      font-size: 1.25rem;
+      grid-area: 1 / 1;
+      max-width: 275;
+      z-index: 1;
+      align-self: center;
+      justify-self: center;
+
+      max-width: 350px;
+
+      display: block;
+      margin: 50px;
+    }
+
+    @media screen and (max-width: 400px) {
+      p {
+        font-size: 1rem;
+        line-height: 1.1;
+      }
+    }
+
+    @media screen and (max-width: 300px) {
+      p {
+        font-size: 0.8rem;
+        line-height: 1;
+      }
+    }
   }
 `;
 
@@ -28,32 +83,9 @@ export const FlyerCard: React.FCwC<{ quoteIdx: number }> = ({
 }) => {
   return (
     <FlyerCardCSSWrapper $quoteIdx={quoteIdx}>
-      <StaticImage
-        src="../data/images/flyercard.png"
-        alt="a flyer background, a quote handed out by warren"
-        style={{
-          position: "relative",
-          zIndex: 0,
-          gridArea: "1 / 1",
-          maxWidth: "500px",
-          alignSelf: "center",
-          justifySelf: "center",
-          transform: "translate(-15px)",
-        }}
-      />
-      <p
-        style={{
-          fontFamily: "monospace",
-          fontSize: "1.25rem",
-          gridArea: "1 / 1",
-          maxWidth: 275,
-          zIndex: 1,
-          alignSelf: "center",
-          justifySelf: "center",
-        }}
-      >
-        {quotes[quoteIdx]?.toLowerCase()}
-      </p>
+      <div className="cardBG">
+        <p>{quotes[quoteIdx]?.toLowerCase()}</p>
+      </div>
     </FlyerCardCSSWrapper>
   );
 };

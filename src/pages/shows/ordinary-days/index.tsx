@@ -20,6 +20,7 @@ import Bio, { IBioProps } from "../../../components/shows/Bio";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { FlyerCard } from "./components/ODFlyerCard";
 import TorchLogo from "../../../components/general/TorchLogo";
+import Helmet from "react-helmet";
 
 interface IOrdyDaysProgrammeProps {
   data: any;
@@ -46,9 +47,23 @@ const ODBioWrapper = styled.div`
   .bio-image {
     grid-row: 2;
     grid-column: 1;
-    max-height: 50vh;
-    max-width: 75%;
-    justify-self: center;
+
+    place-self: center;
+
+    > div {
+      max-height: 45vh;
+    }
+
+    @media screen and (min-width: 900px) {
+      img {
+        image-rendering: auto;
+        max-height: 20rem;
+      }
+
+      grid-row: 2 / -1;
+      justify-self: left;
+      align-self: start;
+    }
   }
 
   .bio-header {
@@ -57,42 +72,29 @@ const ODBioWrapper = styled.div`
     }
     grid-column: 1;
     grid-row: 1;
-  }
-
-  .bio-bio {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
-  @media (min-width: 900px) {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 4rem 1fr;
-
-    .bio-image {
-      max-height: 20rem;
-
-      img {
-        image-rendering: auto;
-      }
-
-      grid-row: 2 / -1;
-      justify-self: left;
-      align-self: start;
-    }
-
-    .bio-header {
+    @media screen and (min-width: 900px) {
       align-self: center;
 
       grid-column: 1;
       grid-row: 1;
     }
+  }
 
-    .bio-bio {
+  .bio-bio {
+    grid-column: 1;
+    grid-row: 3;
+    @media screen and (min-width: 900px) {
       align-self: center;
-
       grid-column: 2;
       grid-row: 2;
     }
+  }
+
+  @media screen and (min-width: 900px) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 4rem 1fr;
+
+    grid-column-gap: 2rem;
   }
 `;
 
@@ -110,15 +112,16 @@ const ODBioRender: React.FCwC<IBioProps> = ({
   return (
     <ODBioWrapper className={className}>
       {image && (
-        <GatsbyImage
-          className="bio-image"
-          image={image}
-          alt={`${name} headshot`}
-          objectFit="contain"
-        />
+        <div className="bio-image">
+          <GatsbyImage
+            image={image}
+            alt={`${name} headshot`}
+            objectFit="contain"
+          />
+        </div>
       )}
       <div className="bio-header">
-        <h2 className="bio-name">{name}</h2>
+        <h3 className="bio-name">{name}</h3>
         <p className="bio-role-and-in-string">
           <b>{roleString}</b>
           <span>
@@ -162,6 +165,9 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
   const dataByName = pivotBiographyData(data);
   return (
     <OrdinaryDaysMain>
+      <Helmet>
+        <link rel="stylesheet" href="https://use.typekit.net/wec7lrm.css" />
+      </Helmet>
       <OrdinaryDaysSection style={{ textAlign: "center" }}>
         <LogoWithStyling />
         <StaticImage
