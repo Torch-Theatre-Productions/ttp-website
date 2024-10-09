@@ -9,6 +9,7 @@ const FlyerCardCSSWrapper = styled.div<{ $quoteIdx: number }>`
   display: flex;
 
   justify-content: center;
+  margin-bottom: 3rem;
 
   .cardBG {
     text-align: center;
@@ -77,17 +78,29 @@ const quotes = [
   "be the reason somebody smiles today",
 ];
 
+const moreQuotes: string[] = require("../data/flyers.json");
+
+let quotesToRender: string[] = [];
+
 export const FlyerCard: React.FCwC<{ quoteIdx: number }> = ({
   quoteIdx,
   ...props
 }) => {
-  return (
-    <FlyerCardCSSWrapper $quoteIdx={quoteIdx}>
+  let [idx, setIdx] = React.useState<number>();
+  React.useEffect(() => {
+    const randIdx = Math.floor(Math.random() * moreQuotes.length);
+    const quote = moreQuotes[randIdx];
+    quotesToRender.push(quote);
+    console.log(`Rolled idx ${randIdx} and rendering quote ${quote}`);
+    setIdx(quotesToRender.length - 1);
+  }, []);
+  return idx !== undefined ? (
+    <FlyerCardCSSWrapper $quoteIdx={idx}>
       <div className="cardBG">
-        <p>{quotes[quoteIdx]?.toLowerCase()}</p>
+        <p>{quotesToRender[idx]?.toLowerCase()}</p>
       </div>
     </FlyerCardCSSWrapper>
-  );
+  ) : null;
 };
 
 export default FlyerCard;

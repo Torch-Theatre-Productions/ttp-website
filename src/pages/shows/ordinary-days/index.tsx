@@ -84,9 +84,10 @@ const ODBioWrapper = styled.div`
     grid-column: 1;
     grid-row: 3;
     @media screen and (min-width: 900px) {
-      align-self: center;
+      align-self: start;
       grid-column: 2;
       grid-row: 2;
+      transform: translateY(-4px);
     }
   }
 
