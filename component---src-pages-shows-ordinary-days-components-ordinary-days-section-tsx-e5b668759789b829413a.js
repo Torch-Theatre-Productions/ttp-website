@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktorch_theatre_productions_website=self.webpackChunktorch_theatre_productions_website||[]).push([[1964],{9800:function(t,e,i){i.r(e),i.d(e,{OrdinaryDaysSection:function(){return n}});const n=i(9685).default.div.withConfig({displayName:"OrdinaryDaysSection",componentId:"sc-1adl0yi-0"})(["position:relative;z-index:2;"]);e.default=n}}]);
+//# sourceMappingURL=component---src-pages-shows-ordinary-days-components-ordinary-days-section-tsx-e5b668759789b829413a.js.map
