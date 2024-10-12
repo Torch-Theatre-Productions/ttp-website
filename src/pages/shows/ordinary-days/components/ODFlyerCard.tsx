@@ -82,22 +82,37 @@ const moreQuotes: string[] = require("../data/flyers.json");
 
 let quotesToRender: string[] = [];
 
-export const FlyerCard: React.FCwC<{}> = ({ ...props }) => {
-  let [idx, setIdx] = React.useState<number>();
-  React.useEffect(() => {
-    const randIdx = Math.floor(Math.random() * moreQuotes.length);
-    const quote = moreQuotes[randIdx];
-    quotesToRender.push(quote);
-    console.log(`Rolled idx ${randIdx} and rendering quote ${quote}`);
-    setIdx(quotesToRender.length - 1);
-  }, []);
-  return idx !== undefined ? (
-    <FlyerCardCSSWrapper $quoteIdx={idx}>
-      <div className="cardBG">
-        <p>{quotesToRender[idx]?.toLowerCase()}</p>
-      </div>
-    </FlyerCardCSSWrapper>
-  ) : null;
-};
+interface IFlyerCardProps {
+  renderQuote?: boolean;
+  className?: string;
+}
+
+export const FlyerCard = React.forwardRef<HTMLDivElement, IFlyerCardProps>(
+  ({ renderQuote, className, ...props }, ref) => {
+    let [idx, setIdx] = React.useState<number>();
+    React.useEffect(() => {
+      const randIdx = Math.floor(Math.random() * moreQuotes.length);
+      const quote = moreQuotes[randIdx];
+      quotesToRender.push(quote);
+      console.log(`Rolled idx ${randIdx} and rendering quote ${quote}`);
+      setIdx(quotesToRender.length - 1);
+    }, []);
+
+    return idx !== undefined ? (
+      <FlyerCardCSSWrapper
+        $quoteIdx={idx}
+        className={className}
+        {...props}
+        ref={ref}
+      >
+        <div className="cardBG">
+          <p>
+            {renderQuote == false ? "" : quotesToRender[idx]?.toLowerCase()}
+          </p>
+        </div>
+      </FlyerCardCSSWrapper>
+    ) : null;
+  }
+);
 
 export default FlyerCard;

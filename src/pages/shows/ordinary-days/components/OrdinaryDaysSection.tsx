@@ -25,6 +25,8 @@ export const OrdinaryDaysSection = styled.div`
   //     margin-top: ${theme.padding.top * 2}rem;
   //   }
   // }
+  position: relative;
+  z-index: 2;
 `;
 
 export default OrdinaryDaysSection;

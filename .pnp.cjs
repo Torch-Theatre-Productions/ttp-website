@@ -44,6 +44,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-source-filesystem", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
           ["gatsby-transformer-sharp", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
           ["gh-pages", "npm:5.0.0"],\
+          ["gsap", "npm:3.12.5"],\
           ["mkdirp", "npm:3.0.1"],\
           ["path-browserify", "npm:1.0.1"],\
           ["process", "npm:0.11.10"],\
@@ -13559,6 +13560,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["gsap", [\
+      ["npm:3.12.5", {\
+        "packageLocation": "./.yarn/cache/gsap-npm-3.12.5-5f40c203df-192e9f6b11.zip/node_modules/gsap/",\
+        "packageDependencies": [\
+          ["gsap", "npm:3.12.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["gzip-size", [\
       ["npm:6.0.0", {\
         "packageLocation": "./.yarn/cache/gzip-size-npm-6.0.0-d5b52fdbf1-2df97f3596.zip/node_modules/gzip-size/",\
@@ -21668,6 +21678,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-source-filesystem", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
           ["gatsby-transformer-sharp", "virtual:c0446b6e9ca563705adbc9a460811bfaed3b131543862028eb0fb75299d7bae48b95fd24ab4540adf255f559cefdc3134df6e5c4b85fef9690bae797e46e811a#npm:5.13.1"],\
           ["gh-pages", "npm:5.0.0"],\
+          ["gsap", "npm:3.12.5"],\
           ["mkdirp", "npm:3.0.1"],\
           ["path-browserify", "npm:1.0.1"],\
           ["process", "npm:0.11.10"],\

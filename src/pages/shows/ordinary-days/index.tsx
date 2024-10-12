@@ -21,6 +21,8 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { FlyerCard } from "./components/ODFlyerCard";
 import TorchLogo from "../../../components/general/TorchLogo";
 import Helmet from "react-helmet";
+import FallingFlyers from "./components/ODFallingFlyers";
+import Flutter3 from "./data/Flutter3.webp";
 
 interface IOrdyDaysProgrammeProps {
   data: any;
@@ -32,6 +34,7 @@ const OrdinaryDaysMain = styled.div`
   * {
     color: ${theme.background};
   }
+  overflow-x: hidden;
 `;
 const bioConfig = require("./data/bios/bios.json");
 
@@ -168,10 +171,11 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
   const dataByName = pivotBiographyData(data);
   return (
     <OrdinaryDaysMain>
+      <FallingFlyers />
       <Helmet>
         <link rel="stylesheet" href="https://use.typekit.net/wec7lrm.css" />
       </Helmet>
-      <OrdinaryDaysSection style={{ textAlign: "center" }}>
+      <OrdinaryDaysSection style={{ textAlign: "center", zIndex: 0 }}>
         <LogoWithStyling />
         <StaticImage
           src={"./data/images/ArtworkHero.png"}
