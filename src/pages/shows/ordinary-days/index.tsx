@@ -10,10 +10,10 @@ import Biographies, {
   pivotBiographyData,
 } from "../../../components/shows/Biographies";
 
-import Welcome from "./data/welcome.md";
+import Welcome from "./data/welcome.mdx";
 import AboutTheShow from "./data/aboutTheShow.md";
 import PerformanceInfo from "./data/performance.mdx";
-import Acknowledgements from "./data/acknowlegements.md";
+import Acknowledgements from "./data/acknowlegements.mdx";
 import AboutTorch from "./data/aboutTorch.md";
 import { graphql } from "gatsby";
 import Bio, { IBioProps } from "../../../components/shows/Bio";
@@ -155,7 +155,9 @@ const LogoWithStyling: React.FCwC<{ style?: any }> = ({ style, ...props }) => {
           ...style,
         }}
       />
-      <h2 style={{ fontFamily: "Century" }}>music and lyrics by adam gwon</h2>
+      <h2 style={{ fontFamily: "'century old style', century" }}>
+        music and lyrics by adam gwon
+      </h2>
     </div>
   );
 };
@@ -187,18 +189,18 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <Welcome />
-        <FlyerCard quoteIdx={0} />
+        <FlyerCard />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <AboutTheShow />
-        <FlyerCard quoteIdx={1} />
+        <FlyerCard />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <LogoWithStyling />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <PerformanceInfo />
-        <FlyerCard quoteIdx={3} />
+        <FlyerCard />
       </OrdinaryDaysSection>
       <OrdinaryDaysSection>
         <h1>Biographies</h1>
@@ -210,7 +212,7 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           )}
           data={dataByName}
         />
-        <FlyerCard quoteIdx={3} />
+        <FlyerCard />
         <h2>Cast</h2>
         <Biographies
           render={ODBioRender}
@@ -219,7 +221,7 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           )}
           data={dataByName}
         />
-        <FlyerCard quoteIdx={4} />
+        <FlyerCard />
         <h2>Production team</h2>
         <Biographies
           render={ODBioRender}
@@ -229,11 +231,11 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
           data={dataByName}
         />
       </OrdinaryDaysSection>
-      <FlyerCard quoteIdx={5} />
+      <FlyerCard />
       <OrdinaryDaysSection>
         <AboutTorch />
       </OrdinaryDaysSection>
-      <FlyerCard quoteIdx={6} />
+      <FlyerCard />
       <OrdinaryDaysSection>
         <Acknowledgements />
       </OrdinaryDaysSection>

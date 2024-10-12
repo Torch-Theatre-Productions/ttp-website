@@ -82,10 +82,7 @@ const moreQuotes: string[] = require("../data/flyers.json");
 
 let quotesToRender: string[] = [];
 
-export const FlyerCard: React.FCwC<{ quoteIdx: number }> = ({
-  quoteIdx,
-  ...props
-}) => {
+export const FlyerCard: React.FCwC<{}> = ({ ...props }) => {
   let [idx, setIdx] = React.useState<number>();
   React.useEffect(() => {
     const randIdx = Math.floor(Math.random() * moreQuotes.length);

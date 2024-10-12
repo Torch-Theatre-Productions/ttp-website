@@ -25,12 +25,14 @@ const NameAndImageHeader = styled.div`
     margin-bottom: 0;
   }
 
-  img {
+  .bio-pic-wrapper {
     height: 7rem;
     width: 7rem;
-    object-fit: cover;
 
-    image-rendering: crisp-edges;
+    .bio-pic {
+      object-fit: cover;
+      image-rendering: crisp-edges;
+    }
   }
 `;
 
@@ -48,7 +50,14 @@ const Bio: React.FCwC<IBioProps> = ({
   return (
     <div className={className}>
       <NameAndImageHeader className="bio-header">
-        {image && <GatsbyImage image={image} alt={`${name} headshot`} />}
+        {image && (
+          <GatsbyImage
+            image={image}
+            alt={`${name} headshot`}
+            className="bio-pic-wrapper"
+            imgClassName="bio-pic"
+          />
+        )}
         <div>
           <h2>{name}</h2>
           <p>
