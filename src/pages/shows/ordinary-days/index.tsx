@@ -145,20 +145,46 @@ const ODBioRender: React.FCwC<IBioProps> = ({
 
 const LogoWithStyling: React.FCwC<{ style?: any }> = ({ style, ...props }) => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <img
-        src={Logo}
-        alt="Ordinary Days Logo"
+    <div style={{ textAlign: "center", position: "relative", zIndex: 1000 }}>
+      <div style={{ position: "relative", display: "inline-block" }}>
+        <img
+          src={Logo}
+          alt="Ordinary Days Logo Blurred"
+          style={{
+            marginBottom: "0rem",
+            marginTop: "1rem",
+            maxHeight: "10vh",
+            marginLeft: "auto",
+            marginRight: "auto",
+            filter: "blur(6px)",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndex: 0,
+            opacity: 0.15,
+          }}
+        />
+        <img
+          src={Logo}
+          alt="Ordinary Days Logo"
+          style={{
+            marginBottom: "0rem",
+            marginTop: "1rem",
+            maxHeight: "10vh",
+            marginLeft: "auto",
+            marginRight: "auto",
+            ...style,
+            position: "relative",
+            zIndex: 1,
+          }}
+        />
+      </div>
+      <h2
         style={{
-          marginBottom: "0rem",
-          marginTop: "1rem",
-          maxHeight: "10vh",
-          marginLeft: "auto",
-          marginRight: "auto",
-          ...style,
+          fontFamily: "'century old style', century",
+          textShadow: "0px 2px 5px rgba(0,0,0,0.15)",
         }}
-      />
-      <h2 style={{ fontFamily: "'century old style', century" }}>
+      >
         music and lyrics by adam gwon
       </h2>
     </div>
@@ -172,11 +198,13 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
   return (
     <OrdinaryDaysMain>
       <FallingFlyers />
+      <LogoWithStyling />
       <Helmet>
         <link rel="stylesheet" href="https://use.typekit.net/wec7lrm.css" />
       </Helmet>
-      <OrdinaryDaysSection style={{ textAlign: "center", zIndex: 0 }}>
-        <LogoWithStyling />
+      <OrdinaryDaysSection
+        style={{ textAlign: "center", position: "relative", zIndex: 0 }}
+      >
         <StaticImage
           src={"./data/images/ArtworkHero.png"}
           alt="silhouette in front of an artpiece"
@@ -184,10 +212,12 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
             maxHeight: "70vh",
             objectFit: "contain",
             marginBottom: "4.5rem",
+            zIndex: -1,
           }}
           imgStyle={{
             objectFit: "contain",
             borderRadius: "3rem",
+            zIndex: -1,
           }}
         />
       </OrdinaryDaysSection>

@@ -53,120 +53,219 @@ const StartingLine = styled.div`
   }
 `;
 
+const flyers = [
+  {
+    webp: Flutter1,
+    gif: Flutter1Gif,
+    relScale: 1.2,
+  },
+  { webp: Flutter2, gif: Flutter2Gif, relScale: 1 },
+  {
+    webp: Flutter3,
+    gif: Flutter3Gif,
+    relScale: 0.6,
+  },
+];
+
 const windowWrap = windowDefined
   ? gsap.utils.wrap(0, window?.innerWidth)
   : null;
-const animatePaper = (paper: HTMLElement) => {
+
+const MAX_ROTATE = 160;
+const MIN_ROTATE = -160;
+
+const getAnimationValues = (flutterScalar: number) => {
+  const hueRotate = Math.ceil(Math.random() * 10) * 80;
+  const initialX =
+    (Math.random() - 0.5) * window?.innerWidth * 0.5 +
+    window?.innerWidth * 0.45;
+
+  const initialIntensity = Math.random() * 75 + 45;
+  const finalY = Math.min(150 - initialIntensity, 40);
+
+  const initialRotate = Math.random() * (MAX_ROTATE - MIN_ROTATE);
+  const rotate1 = -initialRotate;
+  const rotate2 = initialRotate / 2;
+  const rotateY1 = Math.random() * 30;
+  const rotateY2 = Math.random() * -20;
+
+  const scale = (Math.random() * 1.95 + 0.55) / flutterScalar;
+  const blur = scale / flutterScalar;
+  const x1Direction = Math.random() > 0.5 ? "+" : "-";
+  const x1 = (initialX + window?.innerWidth * 0.5) % window?.innerWidth;
+  const x2Direction = Math.random() > 0.5 ? "+" : "-";
+  const x2 = x1 / 1.5;
+
+  const duration1 = 6 + Math.random() * 1.5;
+  const duration2 = 3 + Math.random() * 1.5;
+
+  const animationValues = {
+    hueRotate,
+    scale,
+
+    y1: `+=${initialIntensity}vh`,
+    y2: `+=${finalY}vh`,
+
+    initialX,
+    x1: `${x1Direction}=${x1}`,
+    x2: `${x2Direction}=${x2}`,
+
+    initialRotate,
+    rotate1,
+    rotate2,
+    rotateY1,
+    rotateY2,
+
+    duration1,
+    duration2,
+  };
+
+  return animationValues;
+};
+
+const animatePaper = (paper: HTMLElement, flutterScalar: number) => {
   if (!windowDefined) {
     return null;
   }
+
   const tl = gsap.timeline({
     repeat: -1,
     repeatDelay: 1,
     repeatRefresh: true,
     modifiers: {
       x: (x: string) => {
-        return windowWrap(parseFloat(x)) + "px";
+        return windowWrap ? windowWrap(parseFloat(x)) + "px" : x;
       },
     },
   });
 
   tl.set(paper, {
     transformOrigin: "40% -10%",
-    filter: `hue-rotate(${
-      Math.ceil(Math.random() * 10) * 80
-    }deg) saturate(1.5)`,
+    filter: () => {
+      const { hueRotate } = getAnimationValues(flutterScalar);
+      return `hue-rotate(${hueRotate}deg) saturate(1.5)`;
+    },
     opacity: 1,
-    x:
-      (Math.random() - 0.5) * window?.innerWidth * 0.5 +
-      window?.innerWidth * 0.5,
+    x: () => {
+      const { initialX } = getAnimationValues(flutterScalar);
+      return initialX;
+    },
     y: -400,
-    rotate: `+=${Math.random() * 10 * 35 + 25}`,
-    scale: `${Math.random() * 1.95 + 0.55}`,
+    rotate: () => {
+      const { initialRotate } = getAnimationValues(flutterScalar);
+      return initialRotate;
+    },
+    rotateX: () => Math.random() * 10,
+    scale: () => {
+      const { scale } = getAnimationValues(flutterScalar);
+      return scale;
+    },
     repeatRefresh: true,
   });
 
+  tl.set(paper, {
+    filter: () => {
+      const { hueRotate } = getAnimationValues(flutterScalar);
+      return `hue-rotate(${hueRotate}deg) saturate(1.5) blur(${Math.min(
+        Math.abs(Number(gsap.getProperty(paper, "scale")) / flutterScalar),
+        0.2
+      )}px)`;
+    },
+  });
+
   tl.to(paper, {
-    delay: Math.random() * 3,
-    y: "+=100vh",
-    x: `${Math.random() > 0.5 ? "+" : "-"}=${Math.random() * 200 * 2}`,
-    rotate: `+=${Math.random() * 10 * 35 + 25}`,
-    duration: 7,
+    y: () => {
+      const { y1 } = getAnimationValues(flutterScalar);
+      return y1;
+    },
+    x: () => {
+      const { x1 } = getAnimationValues(flutterScalar);
+      return x1;
+    },
+    rotate: () => {
+      const { rotate1 } = getAnimationValues(flutterScalar);
+      return `+=${rotate1}`;
+    },
+
+    rotateY: () => {
+      const { rotateY1 } = getAnimationValues(flutterScalar);
+      return rotateY1;
+    },
+
+    duration: () => {
+      const { duration1 } = getAnimationValues(flutterScalar);
+      return duration1;
+    },
     ease: "power1.out",
     repeatRefresh: true,
   });
 
   tl.to(paper, {
-    y: "+=50vh",
-    x: `-=${Math.random() * 100 * 2}`,
-    duration: 5,
+    y: () => {
+      const { y2 } = getAnimationValues(flutterScalar);
+      return y2;
+    },
+    x: () => {
+      const { x2 } = getAnimationValues(flutterScalar);
+      return x2;
+    },
+    rotate: () => {
+      const { rotate2 } = getAnimationValues(flutterScalar);
+      return `-=${rotate2}`;
+    },
+    rotateX: () => {
+      const { rotateY2 } = getAnimationValues(flutterScalar);
+      return rotateY2;
+    },
+    duration: () => {
+      const { duration2 } = getAnimationValues(flutterScalar);
+      return duration2;
+    },
     opacity: 0,
-    ease: "power1.in",
+    ease: "power2.in",
     repeatRefresh: true,
   });
 };
 
-const webps = [Flutter1, Flutter2, Flutter3];
-const gifs = [Flutter1Gif, Flutter2Gif, Flutter3Gif];
-
 interface IFlutterWithDelayProps {
-  delay: number;
-  src: string;
-  gifSrc: string;
+  flutterIdx: number;
 }
 
-const FlutterWithDelay: React.FunctionComponent<IFlutterWithDelayProps> = (
-  props
-) => {
+const FlutterWithDelay: React.FunctionComponent<IFlutterWithDelayProps> = ({
+  flutterIdx,
+  ...props
+}) => {
+  const delay = Math.min(Math.random() * 650 + 250, 750) + 1000 * flutterIdx;
+  const item = flyers[flutterIdx % flyers.length];
+  const src = item.webp;
+  const gifSrc = item.gif;
+
   const [shouldRender, setRender] = React.useState<boolean>();
   React.useEffect(() => {
-    setTimeout(() => setRender(true), props.delay);
+    setTimeout(() => setRender(true), delay);
   }, []);
 
   return shouldRender ? (
     <picture
       ref={(ref) => {
-        ref && animatePaper(ref);
+        ref && animatePaper(ref, item.relScale);
       }}
     >
       {!/^((?!chrome|android).)*safari/i.test(navigator.userAgent) && (
-        <source srcSet={props.src} type="image/webp" />
+        <source srcSet={src} type="image/webp" />
       )}
-      <img src={props.gifSrc} />
+      <img src={gifSrc} />
     </picture>
   ) : null;
 };
 
 const FlutterArray = (length: number) =>
-  Array.from(Array(length)).map((_, idx) => (
-    <FlutterWithDelay
-      key={idx}
-      delay={Math.random() * 3000 + 3000 + 1000 * idx}
-      src={webps[idx % webps.length]}
-      gifSrc={gifs[idx % gifs.length]}
-    />
-  ));
-
-/** Creates a fresh value to be consistently used upon different animations */
-const createAnimationCachedValue = (
-  variableName: string,
-  rollValue: () => number
-) => {
-  return (paper: HTMLDivElement) => {
-    const fromEle = paper.getAttribute(`data-${variableName}`);
-    if (fromEle !== null) {
-      return Number(fromEle);
-    }
-
-    const rolledValue = rollValue();
-    paper.setAttribute(`data-${variableName}`, rolledValue.toString());
-
-    return rolledValue;
-  };
-};
+  Array.from(Array(length)).map((_, idx) => {
+    return <FlutterWithDelay key={idx} flutterIdx={idx} />;
+  });
 
 const FallingFlyers: React.FC<{}> = () => {
-  return <StartingLine>{FlutterArray(15)}</StartingLine>;
+  return <StartingLine>{FlutterArray(25)}</StartingLine>;
 };
 
 export default FallingFlyers;
