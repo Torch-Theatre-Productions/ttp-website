@@ -10,6 +10,13 @@ import Flutter3Gif from "../data/Flutter3.gif";
 
 interface ILittleFallingFlyerProps {}
 
+let windowDefined: boolean = true;
+try {
+  window.innerWidth;
+} catch {
+  windowDefined = false;
+}
+
 const StartingLine = styled.div`
   position: sticky;
   height: 1px;
@@ -46,8 +53,13 @@ const StartingLine = styled.div`
   }
 `;
 
-const windowWrap = gsap.utils.wrap(0, window.innerWidth);
+const windowWrap = windowDefined
+  ? gsap.utils.wrap(0, window?.innerWidth)
+  : null;
 const animatePaper = (paper: HTMLElement) => {
+  if (!windowDefined) {
+    return null;
+  }
   const tl = gsap.timeline({
     repeat: -1,
     repeatDelay: 1,
@@ -65,7 +77,9 @@ const animatePaper = (paper: HTMLElement) => {
       Math.ceil(Math.random() * 10) * 80
     }deg) saturate(1.5)`,
     opacity: 1,
-    x: Math.random() * window.innerWidth * 0.8,
+    x:
+      (Math.random() - 0.5) * window?.innerWidth * 0.5 +
+      window?.innerWidth * 0.5,
     y: -400,
     rotate: `+=${Math.random() * 10 * 35 + 25}`,
     scale: `${Math.random() * 1.95 + 0.55}`,
@@ -75,7 +89,7 @@ const animatePaper = (paper: HTMLElement) => {
   tl.to(paper, {
     delay: Math.random() * 3,
     y: "+=100vh",
-    x: `+=${Math.random() * 200 * 2}`,
+    x: `${Math.random() > 0.5 ? "+" : "-"}=${Math.random() * 200 * 2}`,
     rotate: `+=${Math.random() * 10 * 35 + 25}`,
     duration: 7,
     ease: "power1.out",

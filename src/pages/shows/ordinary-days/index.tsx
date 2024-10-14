@@ -10,7 +10,7 @@ import Biographies, {
   pivotBiographyData,
 } from "../../../components/shows/Biographies";
 
-import Welcome from "./data/welcome.mdx";
+import Welcome from "./data/welcome.md";
 import AboutTheShow from "./data/aboutTheShow.md";
 import PerformanceInfo from "./data/performance.mdx";
 import Acknowledgements from "./data/acknowlegements.mdx";
@@ -195,10 +195,10 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
         <Welcome />
         <FlyerCard />
       </OrdinaryDaysSection>
-      <OrdinaryDaysSection>
+      {/* <OrdinaryDaysSection>
         <AboutTheShow />
         <FlyerCard />
-      </OrdinaryDaysSection>
+      </OrdinaryDaysSection> */}
       <OrdinaryDaysSection>
         <LogoWithStyling />
       </OrdinaryDaysSection>
@@ -236,13 +236,13 @@ const OrdinaryDaysProgramme: React.FunctionComponent<
         />
       </OrdinaryDaysSection>
       <FlyerCard />
-      <OrdinaryDaysSection>
+      {/* <OrdinaryDaysSection>
         <AboutTorch />
-      </OrdinaryDaysSection>
-      <FlyerCard />
-      <OrdinaryDaysSection>
+      </OrdinaryDaysSection> */}
+      {/* <FlyerCard /> */}
+      {/* <OrdinaryDaysSection>
         <Acknowledgements />
-      </OrdinaryDaysSection>
+      </OrdinaryDaysSection> */}
       <div
         style={{
           display: "flex",

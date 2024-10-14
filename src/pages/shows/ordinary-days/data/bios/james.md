@@ -1,7 +1,7 @@
 This is James' first performance since returning from Australia where, in a
 12-year period, he trained at NIDA, performed in Sydney, Melbourne and Regional
 Victoria *(Jekyll and Hyde, Les Misérables, 42nd Street, Guys and Dolls, Chess,
-Miss Saigon, First Date and Shrek)* and lead the Melbourne Singers of Gospel.
+Miss Saigon, First Date and Shrek)* and led the Melbourne Singers of Gospel.
 Originally from Oxford, James grew up performing with MYCO and OXOPS with roles
 including **Max Bialystock** *(The Producers)*, **Julian Marsh** *(42nd
 Street)*, **Jud Fry** *(Oklahoma!)*, **Chino** *(West Side Story)*, **Strephon**
