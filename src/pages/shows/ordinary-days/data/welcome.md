@@ -13,7 +13,7 @@ Following the success of *Queers*, we decided to take the plunge and stage our
 first musical. It's been an incredible experience and wouldn't have been
 possible without the dedication and support of many people.
 
-**Chris Venthom** who has not only been a fantastic Musical Director, but has also
+**Chris Ventom** who has not only been a fantastic Musical Director, but has also
 accompanied all the rehearsals and performances. Given the show is completely
 sung through he rarely gets a break and is arguably the hardest working member
 of the team!
