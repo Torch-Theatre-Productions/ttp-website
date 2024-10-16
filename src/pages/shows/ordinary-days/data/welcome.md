@@ -6,7 +6,7 @@ The idea for Torch grew out of our mutual love for little known musicals
 including *Ordinary Days*. We realised there might be a space in Oxford's amateur
 theatre scene for intimate, understated shows with small casts. Our first
 production was *Queers*, a series of monologues celebrating British gay history,
-at the Burton Taylor Theatre in June 2024. We were delighted to be asked to
+at the Burton Taylor Theatre in June 2023. We were delighted to be asked to
 reprise some of the monologues at Ramsden Memorial Hall in March 2024.
 
 Following the success of *Queers*, we decided to take the plunge and stage our
