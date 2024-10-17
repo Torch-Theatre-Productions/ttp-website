@@ -18,8 +18,8 @@ accompanied all the rehearsals and performances. Given the show is completely
 sung through he rarely gets a break and is arguably the hardest working member
 of the team!
 
-**Nicky Robinson** who has supported Victoria brilliantly throughout the
-process. As a first-time Director, Victoria could not have asked for a better
+**Nicky Robinson** who has supported me brilliantly throughout the
+process. As a first-time Director, I could not have asked for a better
 mentor.
 
 **James**, **Holly** and **Hannah** for your talent, hard work and enthusiasm.
@@ -38,14 +38,12 @@ yourselves with the show.
 
 [Lara Shardlow Photography](https://www.larashardlow.com/) for taking our dress rehearsal photos. 
 
-**Emily Jameson** for your production advice and support.
-
 Thank you to everyone who auditioned. There was so much talent in the auditions
 and we really enjoyed meeting you all.
 
 Thank you to the Old Fire Station, Concord Theatricals Ltd, the Ark-T Centre,
-Dean Court Community Centre, Risinghurst Community Centre, the Old Schoolhouse
-and the Asian Community Centre.
+Dean Court Community Centre, Risinghurst Community Centre, the Old Schoolhouse,
+the Asian Community Centre, Emily Jameson and Clare Finch.
 
 And finally, thank you for buying a ticket and supporting us. Please follow us
 on [Instagram](https://www.instagram.com/torchtheatreproductions/) or
